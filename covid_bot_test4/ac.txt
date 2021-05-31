@@ -1,0 +1,33 @@
+#***************************FACILITIES***********************************
+class ActionFacility_labs_Search(Action):
+
+    def name(self) -> Text:
+        return "action_facility_covid19_labs"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        response = requests.get(
+            "https://api.covid19india.org/resources/resources.json").json()
+
+        entities = tracker.latest_message['entities']
+        print("Last Message : ", entities)
+        state = None
+
+        for e in entities:
+            if e['entity'] == "state":
+                state = e['value']
+
+        message = "Please enter correct state or city name or try rephrasing"
+
+        for res in response['resources']:
+            if res["state"] == str(state).title() and res['category'] == 'CoVID-19 Testing Lab':
+                print(res)
+                message = "Category: " + res["category"] + " City: " + res["city"] + " Organisation: " + res['nameoftheorganisation'] +" Description: " + res["descriptionandorserviceprovided"] + " State: " + res['state'] + " Phone: " + res[
+                        'phonenumber'] + " Contact: " + res["contact"]
+
+        print(message)
+        dispatcher.utter_message(message)
+
+        return []

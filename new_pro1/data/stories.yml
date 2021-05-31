@@ -1,0 +1,93 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+#***************************videos***********************************
+#- story: video
+#  steps:
+#  - intent: how_to_protect_yourself_from_covid19
+#  - action: utter_how_to_protect_yourself_from_covid19
+#  - action: action_video
+
+#***************************New***********************************
+#***************************Advice for public***********************************
+- story: features
+  steps:
+  - intent: features
+  - action: utter_features
+
+- story: Advice for public
+  steps:
+  - intent: Advice_for_public
+  - action: utter_Advice_for_public
+
+- story: Diagnosed with COVID-19
+  steps:
+  - intent: iso_techniques
+  - action: utter_iso_techniques
+
+- story: COVID-19 symptoms and flu
+  steps:
+  - intent: symptoms_n_flu
+  - action: utter_symptoms_n_flu
+
+- story: Break the Chain
+  steps:
+  - intent: Break_the_Chain
+  - action: utter_Break_the_Chain
+
+- story: Health at Home
+  steps:
+  - intent: health_at_home
+  - action: utter_health_at_home
+
+- story: Home care
+  steps:
+  - intent: Home_care
+  - action: utter_Home_care
+
+- story: Pregnancy & breastfeeding
+  steps:
+  - intent: Pregnancy_breastfeeding
+  - action: utter_Pregnancy_breastfeeding
+
+- story: Physical activity
+  steps:
+  - intent: Physical_activity
+  - action: utter_Physical_activity
+
+- story: Mental health
+  steps:
+  - intent: Mental_health
+  - action: utter_Mental_health
+
+- story: Healthy diet
+  steps:
+  - intent: Healthy_diet
+  - action: utter_Healthy_diet

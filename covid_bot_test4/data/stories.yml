@@ -1,0 +1,479 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: tracker path
+  steps:
+  - intent: covid_tracker
+  - action: action_corona_tracker
+
+- story: tracker_1 path
+  steps:
+  - intent: greet
+  - action: utter_botgreet 
+  - intent: what_can_you_do
+  - action: utter_things_do 
+  - intent: covid_tracker
+  - action: utter_which_state
+  - intent: covid_tracker
+  - action: action_corona_tracker
+ 
+ 
+- story: tracker_2 path
+  steps:
+  - intent: greet
+  - action: utter_botgreet 
+  - intent: what_can_you_do
+  - action: utter_things_do 
+  - intent: faq_symptoms
+  - action: utter_symptoms
+
+#***************************FAQ***********************************
+- story: faq
+  steps:
+  - intent: faq
+  - action: utter_faqs
+
+- story: symptoms path
+  steps:
+  - intent: faq_symptoms
+  - action: utter_symptoms
+
+- story: distancing path
+  steps:
+  - intent: faq_distancing
+  - action: utter_distancing
+
+- story: spread path
+  steps:
+  - intent: faq_spread
+  - action: utter_spread
+
+- story: covid_info path
+  steps:
+  - intent: covid_info
+  - action: utter_covid_info
+
+- story: covid_people path
+  steps:
+  - intent: covid_people
+  - action: utter_covid_people
+
+
+
+#***************************MICS***********************************
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+#***************************FACILITIES***********************************
+- story: facility find
+  steps:
+  - intent: facility
+  - action: utter_facility_types
+
+- story: facility find(labs)
+  steps:
+  - intent: CoVID-19 Testing Lab
+  - action: action_facility_covid19_labs
+
+- story: facility find(hospital)
+  steps:
+  - intent: hospitals and centers
+  - action: action_facility_covid19_hospital
+
+- story: facility find(accommodation)
+  steps:
+  - intent: accommodation and shelter homes
+  - action: action_facility_covid19_accommodation
+
+- story: facility find(free food)
+  steps:
+  - intent: free food
+  - action: action_facility_covid19_free_food
+
+#***************************EMERGENCY***********************************
+- story: Emergency
+  steps:
+  - intent: emergency
+  - action: utter_emergency_facility
+
+- story: Emergency(police)
+  steps:
+  - intent: Police
+  - action: action_police
+
+- story: Emergency(government_helpline)
+  steps:
+  - intent: Government_Helpline
+  - action: action_government_helpline
+
+- story: Emergency(ambulance)
+  steps:
+  - intent: Ambulance
+  - action: action_ambulance
+
+#***************************Screening***********************************
+##- story: Screening
+##  steps:
+##  - intent: screening
+##  - action: utter_symptoms
+
+- story: screening_1path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: normal
+  - action: utter_symptoms_3
+  - intent: nil
+  - action: utter_health_condition
+  - intent: nil
+  - action: utter_decision
+
+- story: screening_2 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: normal
+  - action: utter_symptoms_3
+  - intent: nil
+  - action: utter_health_condition
+  - intent: hbp
+  - action: utter_decision
+
+- story: screening_3 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: normal
+  - action: utter_symptoms_3
+  - intent: nil
+  - action: utter_health_condition
+  - intent: diabetes
+  - action: utter_decision
+
+- story: screening_4 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: normal
+  - action: utter_symptoms_3
+  - intent: sorethroat
+  - action: utter_health_condition
+  - intent: nil
+  - action: utter_decision
+
+- story: screening_5 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: normal
+  - action: utter_symptoms_3
+  - intent: sorethroat
+  - action: utter_health_condition
+  - intent: hbp
+  - action: utter_decision_2
+
+- story: screening_6 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: normal
+  - action: utter_symptoms_3
+  - intent: sorethroat
+  - action: utter_health_condition
+  - intent: diabetes
+  - action: utter_decision_2
+
+- story: screening_7 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: normal
+  - action: utter_symptoms_3
+  - intent: drycough
+  - action: utter_health_condition
+  - intent: nil
+  - action: utter_decision
+
+- story: screening_8 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: normal
+  - action: utter_symptoms_3
+  - intent: drycough
+  - action: utter_health_condition
+  - intent: hbp
+  - action: utter_decision_2
+
+- story: screening_9 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: normal
+  - action: utter_symptoms_3
+  - intent: drycough
+  - action: utter_health_condition
+  - intent: diabetes
+  - action: utter_decision_2
+
+- story: screening_10 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: fever
+  - action: utter_symptoms_3
+  - intent: nil
+  - action: utter_health_condition
+  - intent: hbp
+  - action: utter_decision_2
+
+- story: screening_11 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: fever
+  - action: utter_symptoms_3
+  - intent: nil
+  - action: utter_health_condition
+  - intent: diabetes
+  - action: utter_decision_2
+
+- story: screening_12 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: fever
+  - action: utter_symptoms_3
+  - intent: nil
+  - action: utter_health_condition
+  - intent: nil
+  - action: utter_decision_2
+
+- story: screening_13 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: fever
+  - action: utter_symptoms_3
+  - intent: drycough
+  - action: utter_health_condition
+  - intent: hbp
+  - action: utter_decision_2
+
+- story: screening_14 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: fever
+  - action: utter_symptoms_3
+  - intent: drycough
+  - action: utter_health_condition
+  - intent: diabetes
+  - action: utter_decision_2
+
+- story: screening_15 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: fever
+  - action: utter_symptoms_3
+  - intent: drycough
+  - action: utter_health_condition
+  - intent: nil
+  - action: utter_decision_2
+
+- story: screening_16 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: fever
+  - action: utter_symptoms_3
+  - intent: sorethroat
+  - action: utter_health_condition
+  - intent: diabetes
+  - action: utter_decision_2
+
+- story: screening_17 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: fever
+  - action: utter_symptoms_3
+  - intent: sorethroat
+  - action: utter_health_condition
+  - intent: hbp
+  - action: utter_decision_2
+
+- story: screening_18 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: fever
+  - action: utter_symptoms_3
+  - intent: sorethroat
+  - action: utter_health_condition
+  - intent: nil
+  - action: utter_travel
+  - intent: no_travel
+  - action: utter_decision_2
+
+- story: screening_19 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: highfever
+  - action: utter_symptoms_3
+  - intent: nil
+  - action: utter_health_condition
+  - intent: diabetes
+  - action: utter_decision_2
+
+- story: screening_20 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: highfever
+  - action: utter_symptoms_3
+  - intent: nil
+  - action: utter_health_condition
+  - intent: hbp
+  - action: utter_decision_2
+
+- story: screening_21 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: highfever
+  - action: utter_symptoms_3
+  - intent: nil
+  - action: utter_health_condition
+  - intent: nil
+  - action: utter_decision
+
+
+- story: screening_22 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: highfever
+  - action: utter_symptoms_3
+  - intent: drycough
+  - action: utter_health_condition
+  - intent: diabetes
+  - action: utter_decision_2
+
+- story: screening_23 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: highfever
+  - action: utter_symptoms_3
+  - intent: drycough
+  - action: utter_health_condition
+  - intent: hbp
+  - action: utter_decision_2
+
+- story: screening_24 pat
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: highfever
+  - action: utter_symptoms_3
+  - intent: drycough
+  - action: utter_health_condition
+  - intent: nil
+  - action: utter_decision_2
+
+- story: screening_25 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: highfever
+  - action: utter_symptoms_3
+  - intent: sorethroat
+  - action: utter_health_condition
+  - intent: nil
+  - action: utter_decision_2
+
+- story: screening_26 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: highfever
+  - action: utter_symptoms_3
+  - intent: sorethroat
+  - action: utter_health_condition
+  - intent: diabetes
+  - action: utter_decision_2
+
+- story: screening_27 path
+  steps:
+  - intent: screening
+  - action: utter_intermediary
+  - action: utter_temperature
+  - intent: highfever
+  - action: utter_symptoms_3
+  - intent: sorethroat
+  - action: utter_health_condition
+  - intent: hbp
+  - action: utter_decision_2

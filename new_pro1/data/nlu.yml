@@ -1,0 +1,147 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+#***************************VIDEOS***********************************
+#- intent: how_to_protect_yourself_from_covid19
+#  examples: |
+#    - how to protect yourself from covid-19
+#    - how to be safe from covid-19
+
+
+#***************************New***********************************
+#***************************Advice for public***********************************
+- intent: features
+  examples: |
+    - features
+
+- intent: Advice_for_public
+  examples: |
+    - Advice for public
+
+- intent: iso_techniques
+  examples: |
+    - Diagnosed with COVID-19
+
+- intent: symptoms_n_flu
+  examples: |
+    - COVID-19 symptoms and flu
+
+- intent: Break_the_Chain
+  examples: |
+    - Break the Chain
+
+- intent: health_at_home
+  examples: |
+    - Health at Home
+
+- intent: Home_care
+  examples: |
+    - Home care
+
+- intent: Pregnancy_breastfeeding
+  examples: |
+    - Pregnancy & breastfeeding
+
+- intent: Physical_activity
+  examples: |
+    - Physical activity
+
+- intent: Mental_health
+  examples: |
+    - Mental health
+
+- intent: Healthy_diet
+  examples: |
+    - Healthy diet
+
+

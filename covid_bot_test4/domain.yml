@@ -1,0 +1,353 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- nil:
+    use_entities: true
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- thanks:
+    use_entities: true
+#***************************FACILITIES***********************************
+- facility:
+    use_entities: true
+- CoVID-19 Testing Lab:
+    use_entities: true
+- hospitals and centers:
+    use_entities: true
+- accommodation and shelter homes:
+    use_entities: true
+- free food:
+    use_entities: true
+#***************************EMERGENCY***********************************
+- emergency:
+    use_entities: true
+- Police:
+    use_entities: true
+- Government_Helpline:
+    use_entities: true
+- Ambulance:
+    use_entities: true
+#- inform:
+#    use_entities: true
+
+- mood_unhappy:
+    use_entities: true
+- covid_tracker:
+    use_entities: true
+- what_can_you_do:
+    use_entities: true
+##***************************FAQ***********************************
+- faq:
+    use_entities: true
+- faq_symptoms:
+    use_entities: true
+- faq_distancing:
+    use_entities: true
+- faq_spread:
+    use_entities: true
+- how_spread:
+    use_entities: true
+- covid_info:
+    use_entities: true
+- faq_vulnerable:
+    use_entities: true
+- covid_people:
+    use_entities: true
+- faq_vaccine:
+    use_entities: true
+##***************************screening***********************************
+- screening:
+    use_entities: true
+- normal:
+    use_entities: true
+- fever:
+    use_entities: true
+- highfever:
+    use_entities: true
+- drycough:
+    use_entities: true
+- shortness_of_breath:
+    use_entities: true
+- interacted:
+    use_entities: true
+- examined:
+    use_entities: true
+- diabetes:
+    use_entities: true
+- hypertension:
+    use_entities: true
+- lung_disease:
+    use_entities: true
+- heart_disease:
+    use_entities: true
+- sorethroat:
+    use_entities: true
+- no_travel:
+    use_entities: true
+- travel_history:
+    use_entities: true
+- no_contact:
+    use_entities: true
+- hbp:
+    use_entities: true
+
+entities:
+- state
+- city
+
+responses:
+  utter_botgreet:
+  - text: hey! How can i help you sir ?
+  utter_things_do:
+  - buttons:
+    - payload: /screening
+      title: Screening
+    - payload: /covid_tracker
+      title: Tracker
+    - payload: /faq
+      title: FAQ(Frequently Asked Question)
+    - payload: /facility
+      title: Facility Type
+    - payload: /emergency
+      title: Emergency
+    text: 'I can help you know '
+  utter_language:
+  - buttons:
+    - payload: /english
+      title: English
+    - payload: /Hindi
+      title: Hindi
+    text: Please pick your preferred language.
+  utter_intermediary:
+  - text: Great! So we're about to ask you a couple of questions to determine your health condition.
+  utter_age:
+  - text: "Let's start with the basics! How old are you? "
+  utter_gender:
+  - buttons:
+    - payload: /female
+      title: female
+    - payload: /Male
+      title: Male
+    text: And your gender? 👇
+  utter_temperature:
+  - buttons:
+    - payload: /normal
+      title: Normal (96°F-98.6°F)
+    - payload: /fever
+      title: Fever (98.7°F-102°F)
+    - payload: /high fever
+      title: High Fever(>102°F)
+    text: Now let's understand your current body temperature in degrees Fahrenheit. 🤒 Remember Normal body temperature is 98.6°F. 🌡
+  utter_health_condition:
+  - buttons:
+    - payload: /diabetes
+      title: Diabetes
+    - payload: /hbp
+      title: High blood Pressure
+    - payload: /heart_disease
+      title: Heart Disease
+    - payload: /kidney
+      title: Kidney Disease
+    - payload: /lung
+      title: Lung Disease
+    - payload: /stroke
+      title: Stroke
+    - payload: /nil
+      title: None of these
+    text: To understand your condition, we need more details about previous health conditions. ⛑Hope you understand. 🙏 Do you have a history of any of these conditions (mark all those applicable) ✔
+  utter_symptom_2:
+  - buttons:
+    - payload: /improved
+      title: Improved
+    - payload: /no_change
+      title: Same no change
+    - payload: /bad
+      title: Bad
+    - payload: /bad_considerably
+      title: Bad Considerably
+    text: 'One last question and we are done. 🙏 How have your symptoms progressed over the last 48 hrs? ⏰ '
+  utter_travel:
+  - buttons:
+    - payload: /no_travel
+      title: No Travel History
+    - payload: /no_contact
+      title: No contact with anyone with the symptoms
+    - payload: /travel_history
+      title: History of travel and meeting in affected geographical area in last 14 days
+    text: I noted that ✍ Please tell us about your travel and exposure details. ✈
+  utter_symptoms_3:
+  - buttons:
+    - payload: /drycough
+      title: Dry Cough
+    - payload: /sorethroat
+      title: Sore Throat
+    - payload: /shortness_of_breath
+      title: Shortness of Breath
+    - payload: /nil
+      title: None of these
+    text: Hmm...🤔 Are you experiencing any of the symptoms below (mark all those applicable)? 🤒
+  utter_which_state:
+  - text: Which state numbers you want to know ?
+  utter_distancing:
+  - text: Social distancing is a public health practice that aims to prevent sick people from coming in close contact with healthy people in order to reduce opportunities for disease transmission. It can include large-scale measures like canceling group events or closing public spaces, as well as individual decisions such as avoiding crowds.
+  utter_spread:
+  - text: 'To prevent the spread of COVID-19: Clean your hands often. Use soap and water, or an alcohol-based hand rub. Maintain a safe distance from anyone who is coughing or sneezing. Wear a mask when physical distancing is not possible. Don’t touch your eyes, nose or mouth. Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze. Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention.'
+  utter_spread_2:
+  - text: "The virus is transmitted through direct contact with respiratory droplets of an infected person (generated
+             through coughing and sneezing). Individuals can also be infected from and touching surfaces
+             contaminated with the virus and touching their face (e.g., eyes, nose, mouth). The COVID-19 virus may
+             survive on surfaces for several hours, but simple disinfectants can kill it"
+
+  utter_vulnerable:
+  - text: "We are learning more about how COVID-19 affects people every day. Older people, and people with
+             chronic medical conditions, such as diabetes and heart disease,appear to be more at risk of developing
+             severe symptoms. As this is a new virus, we are still learning about how it affects children. We know it is
+             possible for people of any age to be infected with the virus, but so far there are relatively few cases of
+             COVID-19 reported among children. This is a new virus and we need to learn more about how it affects
+             children. The virus can be fatal in rare cases, so far mainly among older people with pre-existing medical
+             conditions."
+
+  utter_decision:
+  - text: "Based on the symptoms you shared with us, it's unlikely you have a COVID 19 infection.
+             However, you must maintain social distancing and regularly wash your hands and sanitize them.
+             #Stayhome. #Staysafe 🙂"
+  utter_decision_2:
+  - text: "Based on the symptoms you shared with us, we would recommend you to visit the nearest COVID center for testing.Make sure you don't come in close contact with your friends and family."
+
+  utter_decision_3:
+  - text: "Based on the symptoms you shared with us, we would recommend you to consult to a doctor.
+               However, you must maintain social distancing and regularly wash your hands and sanitize them.
+               #Stayhome. #Staysafe 🙂"
+
+  utter_covid_info:
+  - text: COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2. WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.
+  utter_covid_people:
+  - text: Among those who develop symptoms, most (about 80%) recover from the disease without needing hospital treatment. About 15% become seriously ill and require oxygen and 5% become critically ill and need intensive care. Complications leading to death may include respiratory failure, acute respiratory distress syndrome (ARDS), sepsis and septic shock, thromboembolism, and/or multiorgan failure, including injury of the heart, liver or kidneys. In rare situations, children can develop a severe inflammatory syndrome a few weeks after infection.
+  utter_greet:
+  - text: Hey! How are you?
+  utter_symptoms:
+  - text: 'The most common symptoms of COVID-19 are: *Fever *Dry cough *Fatigue Other symptoms that are less common and may affect some patients include: *Loss of taste or smell, *Nasal congestion, *Conjunctivitis (also known as red eyes) *Sore throat, *Headache, *Muscle or joint pain, *Different types of skin rash, *Nausea or vomiting, *Diarrhea, *Chills or dizziness. Symptoms of severe COVID‐19 disease include: *Shortness of breath, *Loss of appetite, *Confusion, *Persistent pain or pressure in the chest, *High temperature (above 38 °C). Other less common symptoms are: *Irritability, *Confusion, *Reduced consciousness (sometimes associated with seizures), *Anxiety, *Depression, *Sleep disorders, More severe and rare neurological complications such as strokes, brain inflammation, delirium and nerve damage. People of all ages who experience fever and/or cough associated with difficulty breathing or shortness of breath, chest pain or pressure, or loss of speech or movement should seek medical care immediately. If possible, call your health care provider, hotline or health facility first, so you can be directed to the right clinic.'
+
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_noworries:
+  - text: My pleasure.
+  - text: You are welcome!
+
+  utter_facility_types:
+  - buttons:
+    - payload: /CoVID-19 Testing Lab
+      title: Testing Labs
+    - payload: /hospitals and centers
+      title: Hospitals and Centers
+    - payload: /accommodation and shelter homes
+      title: Accommodations and Shelter homes
+    - payload: /free food
+      title: Free food and Community kitchen
+    text: Hmm..What Facility are you looking for? 🤒
+  utter_emergency_facility:
+  - buttons:
+    - payload: /Police
+      title: Police
+    - payload: /Government_Helpline
+      title: Government Helpline
+    - payload: /Ambulance
+      title: Ambulance
+    - payload: /deny
+      title: None of these
+    text: Hmm..What Emergency Facility are you looking for? 🤒
+  utter_faqs:
+  - buttons:
+    - payload: /faq_symptoms
+      title: Symptoms
+    - payload: /faq_distancing
+      title: Social Distancing
+    - payload: /faq_spread
+      title: Virus Spread
+    - payload: /how_spread
+      title: How does it Spread
+    - payload: /faq_vulnerable
+      title: Vulnerability
+    - payload: /covid_info
+      title: Covid info
+    - payload: /covid_people
+      title: Covid People
+    - payload: /faq_vaccine
+      title: Vaccine
+    text: Hmm..What FAQ are you looking for? 🤒
+
+#  utter_ask_location:
+#  - text: Please enter your state or city?
+
+actions:
+#covid-tracker
+- action_corona_tracker
+#facility
+- utter_facility_types
+- action_facility_covid19_labs
+- action_facility_covid19_hospital
+- action_facility_covid19_accommodation
+- action_facility_covid19_free_food
+#emergency_services
+- utter_emergency_facility
+- action_ambulance
+- action_police
+- action_government_helpline
+#screening
+- utter_age
+- utter_decision
+- utter_decision_2
+- utter_decision_3
+- utter_gender
+- utter_temperature
+- utter_health_condition
+- utter_symptom_2
+- utter_symptoms_3
+- utter_travel
+#faq
+- utter_faqs
+- utter_symptoms
+- utter_distancing
+- utter_spread
+- utter_covid_info
+- utter_covid_people
+- utter_vulnerable
+#misc
+- utter_botgreet
+- utter_greet
+- utter_things_do
+- utter_which_state
+- utter_language
+- utter_intermediary
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_noworries
+
+
+e2e_actions: []

@@ -1,0 +1,557 @@
+version: "2.0"
+nlu:
+
+- intent: thanks
+  examples: |
+    - Thanks
+    - Thank you
+    - Thank you so much
+    - Thanks bot
+    - Thanks for that
+    - cheers
+    - cheers bro
+    - ok thanks!
+    - perfect thank you
+    - thanks a bunch for everything
+    - thanks for the help
+    - thanks a lot
+    - amazing, thanks
+    - cool, thanks
+    - cool thank you
+    - Thank you bye
+    - thank u
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: covid_tracker_1
+  examples: |
+    - number of cases in my area
+    - are there a lot of cases right now?
+    - does the country have a lot of cases?
+    - does the have a lot of cases?
+    - have many people died due to covid-19?
+    - how many cases have there been
+    - how many cases of corona infection have there been?
+    - how many deaths have there been?
+    - how many fatalities have there been?
+    - how many have died due to coronavirus
+    - how many have tested positive?
+    - how many people have been infected
+    - how many people have tested positive
+    - number of cases
+    - what is the fatality number?
+    - what is the fatality rate?
+    - what is the number of cases
+    - what is the number of deaths
+    - what is the number of fatalities?
+    - what is the number of infections?
+    - what number have tested positive?
+    - what number of people have been infected?
+    - what number of people have tested positive?
+    - /covid_tracker_1
+- intent: covid_tracker
+  examples: |
+    - corona cases in [karnataka](state)
+    - corona cases in [maharashtra](state)
+    - corona cases in [goa](state)
+    - corona cases in [bihar](state)
+    - corona cases in [punjab](state)
+    - corona cases in [delhi](state)
+    - corona cases in [west bengal](state)
+    - corona cases in [jharkhand](state)
+    - corona cases in [uttar pradesh](state)
+    - corona cases in [kerala](state)
+    - corona cases in [gujarat](state)
+    - corona cases in [rajasthan](state)
+    - corona cases in [tamil nadu](state)
+    - corona cases in [andhra pradesh](state)
+    - corona cases in [telangana](state)
+    - corona cases in [odisha](state)
+    - corona cases in [chhattisgarh](state)
+    - corona cases in [himachal pradesh](state)
+    - corona cases in [haryana](state)
+    - [karnataka](state)
+    - [maharashtra](state)
+    - [goa](state)
+    - [bihar](state)
+    - [punjab](state)
+    - [delhi](state)
+    - [west bengal](state)
+    - [mumbai](location) cases
+    - cases in [pune](location)
+    - deaths in [delhi](location)
+    - infected in [uttar pradesh](location)
+    - [maharashtra](location) covid cases
+    - decreased cases in [japan](location)
+    - [sikkim](location)
+    - [andaman and nicobar](location)
+    - [mizoram](location)
+    - [manipur](location)
+    - [goa](location)
+    - [nagaland](location)
+    - [tripura](location)
+    - [Port Blair](location)
+    - [Hyderabad](location)
+    - [Nampally](location)
+    - [Secunderabad](location)
+    - [Kadapa](location)
+    - [Kurnool](location)
+    - [Rajahmundry](location)
+    - [Vijayawada](location)
+    - [Visakhapatnam](location)
+    - [Daporijo](location)
+    - [Itanagar](location)
+    - [Tawang](location)
+    - [Barpeta](location)
+    - [Dibrugarh](location)
+    - [Ghungoor](location)
+    - [Guwahati](location)
+    - [Jorhat](location)
+    - [Tezpur](location)
+    - [Muzaffarpur](location)
+    - [Darbhanga](location)
+    - [Gaya](location)
+    - [Patna](location)
+    - [Chandigarh](location)
+    - [Mohali](location)
+    - [Bhilai](location)
+    - [Bilaspur](location)
+    - [Jagdalpur](location)
+    - [Raipur](location)
+    - [Silvassa](location)
+    - [Daman](location)
+    - [Delhi](location)
+    - [New Delhi](location)
+    - [Goa](state)
+    - [Panjim](location)
+    - [Ahmedabad](location)
+    - [Anand](location)
+    - [Bharuch](location)
+    - [Bhavnagar](location)
+    - [Godhra](location)
+    - [Jamnagar](location)
+    - [karamsad](location)
+    - [Rajkot](location)
+    - [Sanand](location)
+    - [Surat](location)
+    - [Surendranagar](location)
+    - [Vadodara](location)
+    - [Agroha](location)
+    - [Ambala](location)
+    - [Bhiwani](location)
+    - [Faridabad](location)
+    - [Gurgaon](location)
+    - [Fatehabad](location)
+    - [Hisar](location)
+    - [Jhajjar](location)
+    - [Jind](location)
+    - [Karnal](location)
+    - [Kurukshetra](location)
+    - [Mahendergarh](location)
+    - [Narnaul](location)
+    - [Palwal](location)
+    - [Panchkula](location)
+    - [Panipat](location)
+    - [Rewari](location)
+    - [Rohtak](location)
+    - [Sirsa](location)
+    - [Sonipat](location)
+    - [Yamunanagar](location)
+    - [Kangra](location)
+    - [Shimla](location)
+    - [Jammu](location)
+    - [Srinagar](location)
+    - [Hazaribagh](location)
+    - [Jamshedpur](location)
+    - [Ranchi](location)
+    - [Bengaluru](location)
+    - [Mangalore](location)
+    - [Alappuzha](location)
+    - [Cochin](location)
+    - [Kannur](location)
+    - [Karakonam](location)
+    - [Kochi](location)
+    - [Kolencherry](location)
+    - [Kollam](location)
+    - [Kottayam](location)
+    - [Kozhikode](location)
+    - [Modakkallur](location)
+    - [Palakkad](location)
+    - [Pathanamthitta](location)
+    - [Perintalmanna](location)
+    - [Thiruvalla](location)
+    - [Thiruvananthapuram](location)
+    - [Thrissur](location)
+    - [Venjaramoodu](location)
+    - [Kavaratti](location)
+    - [Indore](location)
+    - [Mumbai](location)
+    - [Pune](location)
+    - [Thane](location)
+    - [Imphal](location)
+    - [Manipur](location)
+    - [Shillong](location)
+    - [Aizawl](location)
+    - [Kohima](location)
+    - [Behrampur](location)
+    - [Bhubaneswar](location)
+    - [Burla](location)
+    - [Cuttack](location)
+    - [Rourkela](location)
+    - [Gorimedu](location)
+    - [Kalapet](location)
+    - [Kudupakkam](location)
+    - [Madagadipet](location)
+    - [Pangoor](location)
+    - [Pillaiyarkuppam](location)
+    - [Puducherry](location)
+    - [Amritsar](location)
+    - [Hoshiarpur](location)
+    - [Jalandhar](location)
+    - [Ludhiana](location)
+    - [Patiala](location)
+    - [Ropar](location)
+    - [Zirakpur](location)
+    - [Ajmer](location)
+    - [Jaipur](location)
+    - [Jodhpur](location)
+    - [Gangtok](location)
+    - [Chennai](location)
+    - [Kanyakumari](location)
+    - [Salem](location)
+    - [Vellore](location)
+    - [Agartala](location)
+    - [Agra](location)
+    - [Ghaziabad](location)
+    - [Greater Noida](location)
+    - [Hathras](location)
+    - [Kanpur](location)
+    - [Lucknow](location)
+    - [Meerut](location)
+    - [Moradabad](location)
+    - [Muzaffarnagar](location)
+    - [Noida](location)
+    - [Saharanpur](location)
+    - [Varanasi](location)
+    - [Dehradun](location)
+    - [Haldwani](location)
+    - [Rishikesh](location)
+    - [Roorkee](location)
+    - [Kolkata](location)
+    - [Andaman and Nicobar Islands](location)
+    - [Andhra Pradesh](state)
+    - [Arunachal Pradesh](state)
+    - [Assam](state)
+    - [Bihar](state)
+    - [Chhattisgarh](state)
+    - [Dadra & Nagar](location)
+    - [Daman and Diu](location)
+    - [Delhi](location)
+    - [Gujarat](state)
+    - [Haryana](location)
+    - [Himachal Pradesh](state)
+    - [Jammu and Kashmir](state)
+    - [Jharkhand](state)
+    - [Karnataka](location)
+    - [Kerala](state)
+    - [Lakshadweep](location)
+    - [Madhya Pradesh](state)
+    - [Maharashtra](state)
+    - [Manipur](state)
+    - [Meghalaya](state)
+    - [Mizoram](state)
+    - [Nagaland](state)
+    - [Odisha](state)
+    - [Punjab](state)
+    - [Rajasthan](state)
+    - [Sikkim](state)
+    - [Tamil Nadu](state)
+    - [Tripura](state)
+    - [Uttar Pradesh](state)
+    - [Uttarakhand](state)
+    - [West Bengal](state)
+
+- intent: what_can_you_do
+  examples: |
+    - What all things can you do ?
+    - what are the features of the bot ?
+    - features
+    - features of the bot ?
+    - i m fine just want to know features
+- intent: screening
+  examples: |
+    - I want to get screened .
+    - Do I need to go get tested .
+    - when do i need to go to a clinic?
+    - when should i go to hospital?
+    - /screening
+- intent: faq_symptoms
+  examples: |
+    - am i going to die?
+    - am i going to need hospital treatment?
+    - are aches a symptom?
+    - are the symptoms serious?
+    - can i still have it but have no symptoms?
+    - can people die from contacting covid-19?
+    - can people die from contracting covid-19?
+    - can people die from coronavirus?
+    - can people die from this?
+    - can there be complications from covid-19 symptoms?
+    - can you be infected and not show any symptoms?
+    - can you tell me what the symptoms are?
+    - could i be carrying coronavirus if i don't have symptoms?
+    - does everyone have symptoms?
+    - how badly should i be coughing?
+    - how can i identify the symptoms of corona?
+    - how can i tell if i have corona virus?
+    - how do i know i have covid-19?
+    - how do i know i might be a carrier?
+    - how do i know i might have it?
+    - how do i know if i have a high temperature?
+    - how do i know if i have it?
+    - how do i know if i need hospital treatment?
+    - how do i know if i'm a carrier of covid-19?
+    - how do i know if i've caught coronavirus?
+    - how do i know if i've caught it?
+    - how high does my fever have to be for me to go to hospital?
+    - how high is a fever?
+    - how is your body affected by corona?
+    - how long do i have to be sick for before i can go to a clinic?
+    - how long should i have a fever for?
+    - how severe do my symptoms have to be before i go to hospital?
+    - how would my body feel if i caught the virus?
+    - i have a fever, do i have corona?
+    - i'm coughing, what should i do?
+    - is a symptom?
+    - is coughing a symptom of the disease?
+    - is joint pain a symptom?
+    - should i go to a health centre if i have symptoms?
+    - what are the signs and symptoms?
+    - what are the signs of corona?
+    - what are the signs of covid-19?
+    - what are the signs?
+    - what are the symptoms?
+    - what counts as a high temperature?
+    - what do aches and pains mean?
+    - what do the symptoms look like?
+    - what does a high temperature feel like?
+    - what does asymptomatic mean?
+    - what does dry cough mean?
+    - what does having corona feel like?
+    - what does having corona virus feel like?
+    - what does having the virus feel like?
+    - what does it mean if i'm coughing?
+    - what does it mean to be asymptomatic?
+    - what does persistent cough mean?
+    - what does the virus do to your body?
+    - what does this virus do to the body?
+    - what is a dry cough?
+    - what is a fever?
+    - what is a high temperatures?
+    - what is an asymptomatic carrier?
+    - what is different about a dry cough?
+    - what should i do if i think i have it?
+    - what should i do if i think i might have corona virus?
+    - what signs of covid-19 should i look for?
+    - what temperature is a fever?
+    - when do i need to go to a clinic?
+    - when is a cough persistent?
+    - when should i go to hospital?
+    - when should i go to the emergency room?
+    - What Happens If i get  Coronavirus?
+    - What does Coronavirus do?
+    - How does human body behave if i get coronavirus?
+- intent: faq_distancing
+  examples: |
+    - am i going into quarantine?
+    - are there guidelines for how to self-isolate?
+    - can i go for a walk?
+    - can i still go outside?
+    - can i still travel to work?
+    - can i walk somewhere?
+    - do i have to avoid going outside?
+    - do i have to avoid people?
+    - do i have to isolate?
+    - do i have to stay away from people?
+    - do i have to stay inside?
+    - how do i self isolate
+    - how do i socially distance
+    - how does quarantine work?
+    - how does social distancing work?
+    - how far apart should i stay for social distancing?
+    - how long do i have to self-isolate for?
+    - how long do i have to stay inside
+    - how will social distancing help?
+    - should i stay away from people?
+    - what amount of time do i have to self-isolate for?
+    - what are the guidelines for a lockdown?
+    - what are the guidelines for isolating?
+    - what are the guidelines for social-distancing
+    - what counts as essential travel?
+    - what do i have to self-isolate for?
+    - what does social distancing mean?
+    - what essential travel can i still do?
+    - what if i want to go for a walk
+    - what is essential travel?
+    - what is quarantine?
+    - what is self-isolation
+    - what is social distancing
+    - when should i stay in isolation?
+    - who doesn't need to stay at home?
+    - who needs to stay at home?
+    - why do i have to avoid going outside?
+    - why do i have to avoid people?
+    - why do i have to stay inside?
+    - why does social distancing help?
+    - why should i isolate
+    - why should i quarantine myself?
+    - why should most people isolate?
+    - will quarantine work?
+- intent: faq_spread
+  examples: |
+    - can coronavirus spread by coughing?
+    - can coronavirus survive on skin?
+    - can covid get into my eyes?
+    - can sneezing spread coronavirus?
+    - can you catch corona from an unclean surface?
+    - can you catch coronavirus from another person?
+    - can you catch the virus from dirty surfaces?
+    - could i pass corona virus onto someone else?
+    - does coughing spread corona?
+    - does coughing spread covid-19?
+    - does does a virus spread?
+    - how can i avoid covid-19?
+    - how can i avoid getting coronavirus?
+    - how can i protect myself?
+    - how contagious is it?
+    - how did corona become so widespread?
+    - how did covid-19 become so widespread?
+    - how did it become so widespread?
+    - how did this disease become so widespread?
+    - how do i catch corona?
+    - how do viruses become widespread?
+    - how do we stop people getting coronavirus?
+    - how do we stop people getting it?
+    - how do we stop people getting sick?
+    - how do you catch coronavirus
+    - how do you catch it?
+    - how does covid 19 spread?
+    - how does covid pass from person to person?
+    - how does covid spread from person to person?
+    - how does covid-19 spread between between?
+    - how does covid-19 spread from one person to another?- how does covid-19 spread?
+    - how does the virus spread
+    - how is it so contagious?
+    - how long can the virus remain on surfaces?
+    - how long does coronavirus stay on surfaces?
+    - how long does it stay on skin?
+    - how long does the virus stay on your hands face?
+    - how long does the virus stay on your hands?
+    - how would i catch the virus from someone else?
+    - i want to avoid getting covid, what should i do?
+    - is corona virus contagious?
+    - is it contagious?
+    - is this disease very contagious?
+    - what should i do to avoid getting coronavirus?
+    - what should i do to avoid getting covid?
+    - what should i do to protect myself from catching covid19?
+    - what should i do to protect myself?
+    - why can't i touch my face with my hands?
+    - why do you have to clean surfaces?
+    - why is skin-on-skin contact to be avoided?
+    - why shouldn't i touch my eyes?
+    - why shouldn't i touch my face?
+- intent: covid_info
+  examples: |
+    - what is covid_19 ?
+    - what is coronavirus ?
+    - what  is sars cov2 ?
+- intent: covid_people
+  examples: |
+    - what happens to people who get covid-19?
+    - what happens if someone get coronavirus?
+    - what happens when someone get covid virus?
+    - people with coronavirus ?
+    - people infected with ccovid-19
+    - what if someone has covid virus infection?
+    - what if some people has been infected by sars cov2?

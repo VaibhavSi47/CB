@@ -1,0 +1,23 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+##- rule: find_hospitals_name
+##  steps:
+##  - intent: inform
+##  - action: find_hospitals_name
+
+##- rule: find_hospitals_name
+##  steps:
+##  - intent: facility_finder
+##  - action: find_hospitals_name

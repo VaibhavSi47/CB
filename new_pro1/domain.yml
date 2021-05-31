@@ -1,0 +1,259 @@
+version: "2.0"
+config:
+  store_entities_as_slots: true
+
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+#***************************Who_recommendations***********************************
+- features:
+    use_entities: true
+- Advice_for_public:
+    use_entities: true
+- iso_techniques:
+    use_entities: true
+- symptoms_n_flu:
+    use_entities: true
+- Break_the_Chain:
+    use_entities: true
+- health_at_home:
+    use_entities: true
+- Home_care:
+    use_entities: true
+- Pregnancy_breastfeeding:
+    use_entities: true
+- Physical_activity:
+    use_entities: true
+- Mental_health:
+    use_entities: true
+- Healthy_diet:
+    use_entities: true
+
+#entities:
+#slots: {}
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+#***************************New***********************************
+#***************************Advice for public***********************************
+  utter_features:
+  - text: "Some of the features I can help u with:"
+    buttons:
+    - payload: /Advice_for_public
+      title: Advice for public
+
+  utter_Advice_for_public:
+  - text: 'Here are some advice for public given by WHO:'
+    buttons:
+    - payload: /iso_techniques
+      title: Diagnosed with COVID-19
+    - payload: /symptoms_n_flu
+      title: COVID-19 symptoms and flu
+    - payload: /Break_the_Chain
+      title: Break the Chain
+    - payload: /health_at_home
+      title: Health at Home
+    - payload: /Home_care
+      title: Home care
+    - payload: /Pregnancy_breastfeeding
+      title: Pregnancy & breastfeeding
+#    image: https://www.who.int/images/default-source/health-topics/coronavirus/who-3-factors-poster.tmb-768v.jpg?sfvrsn=4f685207_1
+
+
+  utter_iso_techniques:
+  - text: 'If COVID-19 is spreading in your community, stay safe by taking some simple precautions,
+        such as physical distancing, wearing a mask, keeping rooms well ventilated, avoiding crowds, cleaning
+        your hands, and coughing into a bent elbow or tissue. '
+    image: "https://www.who.int/images/default-source/health-topics/coronavirus/person-sick-in-your-household-what-to-do.tmb-479v.jpg"
+#  - image: "https://www.who.int/images/default-source/health-topics/coronavirus/visiting-family.tmb-479v.jpg"
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/grocery-shopping.tmb-479v.jpg?sfvrsn=57603db5_7
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/dont-put-off-medical-appointments.tmb-479v.jpg?sfvrsn=545773bb_7
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/person-sick-in-your-household-prepare.tmb-479v.jpg?sfvrsn=6736e6e5_7
+
+  utter_symptoms_n_flu:
+  - image: "https://www.who.int/images/default-source/health-topics/coronavirus/covid19-infographic-symptoms-final.tmb-479v.png"
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/infographics/are-you-caring-for-children_10_3.tmb-479v.png?sfvrsn=e57ac980_1
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/infographics/are-you-a-healthworker_8_3.tmb-479v.png?sfvrsn=910144da_1
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/infographics/do-you-live-in-an-area-with-malaria_8_3.tmb-479v.png?sfvrsn=530ff3e4_1
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/infographics/are-you-pregnant_11_3.tmb-479v.png?sfvrsn=71ea572b_1
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/infographics/are-you-60-or-older_8_3.tmb-479v.png?sfvrsn=9a4b070e_1
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/infographics/do-you-have-chronic-health-conditions_8_3.tmb-479v.png?sfvrsn=6d8ddaa3_1
+    text: 'COVID-19 symptoms and flu'
+
+  utter_Break_the_Chain:
+  - image: "https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/protect-yourself/blue-1.tmb-479v.png"
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/protect-yourself/blue-2.tmb-479v.png?sfvrsn=2bc43de1_5
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/protect-yourself/blue-3.tmb-479v.png?sfvrsn=b1ef6d45_5
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/myth-busters/infographic-covid-19-transmission-and-protections-final2.tmb-479v.jpg?sfvrsn=7fc5264a_1
+    text: 'Protect yourself and others from getting sick'
+
+  utter_health_at_home:
+  - buttons:
+    - payload: /Physical_activity
+      title: Physical activity
+    - payload: /Mental_health
+      title: Mental health
+    - payload: /Healthy_diet
+      title: Healthy diet
+    text: 'Health at Home'
+
+  utter_Physical_activity:
+  - image: https://www.who.int/images/default-source/campaigns/together-at-home/be-healthy/1.tmb-1920v.png
+#  - image: https://www.who.int/images/default-source/campaigns/together-at-home/be-healthy/2.tmb-1920v.png?sfvrsn=a1785dfc_2
+#  - image: https://www.who.int/images/default-source/campaigns/together-at-home/be-healthy/3.tmb-1920v.png?sfvrsn=c01bd3_2
+#  - image: https://www.who.int/images/default-source/campaigns/together-at-home/be-healthy/5.tmb-1920v.png?sfvrsn=d41e8588_2
+#  - image: https://www.who.int/images/default-source/campaigns/together-at-home/be-healthy/4.tmb-1920v.png?sfvrsn=72776ce9_2
+#  - image: https://www.who.int/images/default-source/campaigns/together-at-home/be-healthy/6.tmb-1920v.png?sfvrsn=1879aa14_2
+#  - image: https://www.who.int/images/default-source/campaigns/together-at-home/be-healthy/7.tmb-1920v.png?sfvrsn=f4f0a252_2
+    text: "The COVID-19 pandemic means that many of us are staying at home  and sitting down more than we usually do.
+          It’s hard for a lot of us to do the sort of exercise we normally do. It’s even harder for people who don’t usually
+          do a lot of physical exercise.
+          But at a time like this, it’s very important for people of all ages and abilities to be as active as possible.
+          WHO’s Be Active campaign aims to help you do just that - and to have some fun at the same time.
+          Regular physical activity benefits both the body and mind. It can reduce high blood pressure, help manage weight
+        and reduce the risk of heart disease, stroke, type 2 diabetes, and various cancers - all conditions that can
+        increase susceptibility to COVID-19.
+        How much physical activity is recommended for your age group?
+
+      =>WHO has recommendations on the amount of physical activity people of all ages should do to benefit their health and well being.
+      @Infants under 1 year of age
+      • All infants should be physically active several times a day.
+      • For those not yet mobile, this includes at least 30 minutes in prone position (tummy time), as floor-based play, spread throughout the day while awake.
+      @Children under 5 years of age
+      • All young children should spend at least 180 minutes a day in a variety of types of physical activities at any intensity
+      • 3-4 year old children should spend at least 60 minutes of this time in moderate- to vigorous-intensity physical activity
+      @Children and adolescents aged 5-17 years
+      • All children and adolescents should do at least 60 minutes a day of moderate to vigorous-intensity physical activity
+      • This should include activities that strengthen muscle and bone, at least 3 days per week
+      • Doing more than 60 minutes of physical activity daily will provide additional health benefits
+      @Adults aged over 18 years
+      • All adults should do at least 150 minutes of moderate-intensity physical activity throughout the week, or at least 75 minutes of vigorous-intensity physical activity throughout the week.
+      • For additional health benefits, adults should increase their moderate-intensity physical activity to 300 minutes per week, or equivalent.
+      • For developing and maintaining musculoskeletal health, muscle-strengthening activities involving major muscle groups should be done on 2 or more days a week
+      • In addition, older adults with poor mobility should do physical activity to enhance balance and prevent falls on 3 or more days per week."
+
+  utter_Mental_health:
+  - image: "https://www.carehospitals.com/wp-content/uploads/2020/11/MHIllustration1.png"
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/stress/stress.tmb-1920v.jpg?sfvrsn=b8974505_23
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/general-public/stress/children-stress.tmb-1920v.jpg?sfvrsn=343355fd_5
+    text: "Here are tips and advice that we hope you will find useful.
+        * keep informed
+        * have a routine
+        * Minimize newsfeeds
+        * social contact is important
+        * avoid alcohol & drug use
+        * screen time
+        * play video games
+        * social media
+        * help others"
+
+  utter_Healthy_diet:
+  - image: "https://cdn.cdnparenting.com/articles/2018/12/05161926/590825882-H.jpg"
+    text: "Tips for maintaining a healthy diet:
+         1. Eat a variety of food, including fruits and vegetables
+         • Every day, eat a mix of whole grains like wheat, maize and rice, legumes like lentils and beans, plenty of fresh fruit and vegetables , with some foods from animal sources (e.g. meat, fish, eggs and milk).
+         • Choose wholegrain foods like unprocessed maize, millet, oats, wheat and brown rice when you can; they are rich in valuable fibre and can help you feel full for longer.
+         • For snacks, choose raw vegetables, fresh fruit, and unsalted nuts.
+
+         2. Cut back on salt
+         • Limit salt intake to 5 grams (equivalent to a teaspoon) a day.
+         • When cooking and preparing foods, use salt sparingly and reduce use of salty sauces and condiments (like soy sauce, stock or fish sauce)
+         • If using canned or dried food, choose varieties of vegetables, nuts and fruit, without added salt and sugars.
+         • Remove the salt shaker from the table, and experiment with fresh or dried herbs and spices for added flavor instead.
+         • Check the labels on food and choose products with lower sodium content.
+
+         3. Eat moderate amounts of fats and oils
+         • Replace butter, ghee and lard with healthier fats like olive, soy, sunflower or corn oil when cooking.
+         • Choose white meats like poultry and fish which are generally lower in fats than red meat; trim meat of visible fat and limit the consumption of processed meats.
+         • Select low-fat or reduced-fat versions of milk and dairy products.
+         • Avoid processed, baked and fried foods that contain industrially produced trans-fat.
+         • Try steaming or boiling instead of frying food when cooking.
+
+         4. Limit sugar intake
+         • Limit intake of sweets and sugary drinks such as fizzy drinks, fruit juices and juice drinks, liquid and powder concentrates, flavoured water, energy and sports drinks, ready-to-drink tea and coffee and flavoured milk drinks.
+         • Choose fresh fruits instead of sweet snacks such as cookies, cakes and chocolate. When other dessert options are chosen, ensure that they are low in sugar and consume small portions.
+         • Avoid giving sugary foods to children. Salt and sugars should not be added to complementary foods given to children under 2 years of age, and should be limited beyond that age.
+
+         5. Stay hydrated
+         • Drink enough water
+         • Good hydration is crucial for optimal health. Whenever available and safe for consumption, tap water is the healthiest and cheapest drink. Drinking water instead of sugar-sweetened beverages is a simple way to limit your intake of sugar and excess calories.
+
+         6. Avoid hazardous and harmful alcohol use
+         Alcohol is not a part of a healthy diet. Drinking alcohol does not protect against COVID-19 and can be dangerous. Frequent or excessive alcohol consumption increases your immediate risk of injury, as well as causing longer-term effects like liver damage, cancer, heart disease and mental illness. There is no safe level of alcohol consumption.
+
+         7. Breastfeed babies and young children
+          Breast milk is the ideal food for infants. It is safe, clean and contains antibodies which help protect against many common childhood illnesses. Babies should be breastfed exclusively during the first 6 months of life, as breast milk provides all the nutrients and fluids they need.
+         • From 6 months of age, breast milk should be complemented with a variety of adequate, safe and nutrient-dense foods. Breastfeeding should continue under babies at 2 years of age or beyond.
+          Women with COVID-19 can breastfeed if they wish to do so and should take infection prevention and control measures. Please see Q&A on breastfeeding and COVID-19"
+
+  utter_Home_care:
+  - image: 'https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-posters/home-care-ill-people-a4-covid.tmb-1920v.png'
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-posters/home-care-everyone-a4-covid.tmb-1920v.png?sfvrsn=29ba54d8_5
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-posters/home-care-caregivers-a4-covid.tmb-1920v.png?sfvrsn=8c412ecd_5
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-social-stills/home-care-ill-people-square-covid.tmb-1920v.png?sfvrsn=cc2c6ce4_5
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-social-stills/home-care-everyone-square-covid.tmb-1920v.png?sfvrsn=8667ecde_5
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/risk-communications/home-care-social-stills/home-care-caregivers-square-covid.tmb-1920v.png?sfvrsn=1fa44d91_5
+    text: "Home care"
+
+  utter_Pregnancy_breastfeeding:
+  - image: 'https://www.who.int/images/default-source/health-topics/coronavirus/pregnancy-breastfeeding/who---pregnancy---1.tmb-crop300.png'
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/pregnancy-breastfeeding/who---pregnancy---2.tmb-crop300.png?sfvrsn=f46288e6_5
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/pregnancy-breastfeeding/who---pregnancy---3.tmb-crop300.png?sfvrsn=c3edf5ad_5
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/pregnancy-breastfeeding/who---pregnancy---4.tmb-crop300.png?sfvrsn=117d2bd8_5
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/pregnancy-breastfeeding/who---pregnancy---5.tmb-crop300.png?sfvrsn=ae4a8c4b_5
+#  - image: https://www.who.int/images/default-source/health-topics/coronavirus/pregnancy-breastfeeding/who---breastfeeding---6.tmb-crop300.png?sfvrsn=6ecc990a_5
+    text: "Pregnancy & breastfeeding"
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_features
+  - utter_Advice_for_public
+  - utter_iso_techniques
+  - utter_symptoms_n_flu
+  - utter_Break_the_Chain
+  - utter_health_at_home
+  - utter_Physical_activity
+  - utter_Mental_health
+  - utter_Healthy_diet
+  - utter_Home_care
+  - utter_Pregnancy_breastfeeding
+#forms: {}
+e2e_actions: []
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

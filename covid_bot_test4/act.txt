@@ -1,0 +1,54 @@
+#***************************FACILITIES***********************************
+class ActionFacilitySearch(Action):
+
+    def name(self) -> Text:
+        return "action_facility_search"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        response = requests.get(
+            "https://api.covid19india.org/resources/resources.json").json()
+
+        entities = tracker.latest_message['entities']
+        print("Last Message : ", entities)
+        state = None
+        city = None
+
+        intent = tracker.latest_message['intent'].get('name')
+        print("Last Message : ", intent)
+        facility = None
+
+        for e in entities:
+            if e['entity'] == "state":
+                state = e['value']
+            elif e['entity'] == "city":
+                city = e['value']
+        for i in intent:
+            if i['intent'] == "CoVID-19 Testing Lab":
+                facility = i['intent']
+            elif i['intent'] == "hospitals and centers":
+                facility = i['intent']
+            elif i['intent'] == "accommodation and shelter homes":
+                facility = i['intent']
+            elif i['intent'] == "free food":
+                facility = i['intent']
+
+#            if (i['intent'] == "CoVID-19 Testing Lab") or (i['intent'] == "hospitals and centers") or (i['intent'] == "accommodation and shelter homes") or (i['intent'] == "free food"):
+#                facility = i['intent']
+
+
+
+        message = "Please enter correct state name or try rephrasing"
+
+        for res in response['resources']:
+            if res['category'] == str(facility).title() and res['state'] == str(state).title() or res['city'] == str(city).title():
+                message = "Category: " + res["category"] + " City: " + res["city"] + " Organisation: " + res['nameoftheorganisation'] +" Description: " + res["descriptionandorserviceprovided"] + " State: " + res['state'] + " Phone: " + res[
+                        'phonenumber'] + " Contact: " + res["contact"]
+#
+        print(message)
+        dispatcher.utter_message(message)
+
+        return []
+

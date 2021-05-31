@@ -1,0 +1,55 @@
+elif res['category'].lower() == 'hospitals and centers' and res['state'].lower()== state.lower():
+#                message = "Category: " + res["category"] + " City: " + res["city"] + " Organisation: " + res[
+#                    'nameoftheorganisation'] + " Description: " + res["descriptionandorserviceprovided"] + " State: " + \
+#                          res['state'] + " Phone: " + res[
+#                              'phonenumber'] + " Contact: " + res["contact"]
+#            elif res['category'].lower() == 'CoVID-19 Testing Lab'.lower() and res['city'].lower() == city.lower():
+#                message = "Category: " + res["category"] + " City: " + res["city"] + " Organisation: " + res[
+#                    'nameoftheorganisation'] + " Description: " + res["descriptionandorserviceprovided"] + " State: " + \
+#                          res['state'] + " Phone: " + res[
+#                              'phonenumber'] + " Contact: " + res["contact"]
+#            elif res['category'].lower() == 'hospitals and centers' and res['city']== city.lower():
+#                message = "Category: " + res["category"] + " City: " + res["city"] + " Organisation: " + res[
+#                    'nameoftheorganisation'] + " Description: " + res["descriptionandorserviceprovided"] + " State: " + \
+#                          res['state'] + " Phone: " + res[
+#                              'phonenumber'] + " Contact: " + res["contact"]
+#            elif res['category'].lower()== 'accommodation and shelter homes' and res['city'].lower()== city.lower():
+#                message = "Category: " + res["category"] + " City: " + res["city"] + " Organisation: " + res[
+#                    'nameoftheorganisation'] + " Description: " + res["descriptionandorserviceprovided"] + " State: " + \
+#                          res['state'] + " Phone: " + res[
+#                              'phonenumber'] + " Contact: " + res["contact"]
+#            elif res['category'].lower()== 'accommodation and shelter homes' and res['state'].lower()== state.lower():
+#                message = "Category: " + res["category"] + " City: " + res["city"] + " Organisation: " + res[
+#                    'nameoftheorganisation'] + " Description: " + res["descriptionandorserviceprovided"] + " State: " + \
+#                          res['state'] + " Phone: " + res[
+#                              'phonenumber'] + " Contact: " + res["contact"]
+#            elif (res['category'].lower() == 'free food' or res['category'].lower()== 'community Kitchen') and res['city'].lower()== city.lower():
+#                message = "Category: " + res["category"] + " City: " + res["city"] + " Organisation: " + res['nameoftheorganisation'] + " Description: " + res["descriptionandorserviceprovided"] + " State: " + \
+#                                     res['state'] + " Phone: " + res['phonenumber'] + " Contact: " + res["contact"]
+#            elif (res['category'].lower() == 'free food' or res['category'].lower() == 'community kitchen') and res['state']== state.title():
+#                message = "Category: " + res["category"] + " City: " + res["city"] + " Organisation: " + res[
+#                    'nameoftheorganisation'] + " Description: " + res["descriptionandorserviceprovided"] + " State: " + \
+#                          res['state'] + " Phone: " + res[
+#                              'phonenumber'] + " Contact: " + res["contact"]
+
+intent = tracker.latest_message['intent'].get('name')
+        print("Last Message : ", intent)
+        facility = None
+
+
+ for i in intent:
+            if i['intent'] == "CoVID-19 Testing Lab":
+                facility = i['intent']
+            elif i['intent'] == "hospitals and centers":
+                facility = i['intent']
+            elif i['intent'] == "accommodation and shelter homes":
+                facility = i['intent']
+            elif i['intent'] == "free food":
+                facility = i['intent']
+#            if (i['intent'] == "CoVID-19 Testing Lab") or (i['intent'] == "hospitals and centers") or (i['intent'] == "accommodation and shelter homes") or (i['intent'] == "free food"):
+#                facility = i['intent']
+res['state'].lower() == str(state).lower() or
+- [karnataka](state)
+    -
+
+#stories

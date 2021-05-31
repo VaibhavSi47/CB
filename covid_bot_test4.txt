@@ -1,0 +1,552 @@
+rules:
+- rule: Activate form
+  steps:
+  - intent: inform
+  - intent: facility_finder
+  - action: find_hospitals_name
+  - active_loop: find_hospitals_name
+
+nlu:
+- intent: covid_tracker
+  examples: |
+    - i want to see number of covid cases in [russia](location)
+    - active cases [russia](location)
+    - [colombia](location) stats
+    - covid [india](location)
+    - corona cases in [usa](location)
+    - coronavirus case [china](location)
+    - [brazil](location) covid
+    - [spain](location) cases
+    - [france](location) no of cases
+    - no of cases in [mexico](location)
+    - what are total number of cases in [japan](location)
+    - how many cases are there in [peru](location)?
+    - are there a lot of cases in [Bangladesh](location)?
+    - how many cases of corona infection have there been in [uk](location)?
+    - how many fatalities have there been in [uk](location)?
+    - how many people have been tested positive ,[usa](location)?
+    - what is the number of infections?
+    - [india](location) what number of people have been infected?
+    - [Peru](location), what number of people have tested positive?
+    - give me live count of [brazil](location)
+    - how many are confirmed cases [pakistan](location)
+    - give me live stats of corona [japan](location)
+    - latest stats updates for corona [mexico](location)
+    - [europe](location)
+
+- intent: search_provider
+  examples: |
+    - [hospital](facility_type)
+    - i need a [hospital](facility_type)
+    - find me a nearby [hospital](facility_type)
+    - show me [hospitals](facility_type)
+    - [hospital](facility_type)
+    - find me a nearby [hospital](facility_type) my zip code is [10119](location)
+    - i need a [home health agency](facility_type)
+    - find me a nearby [home health agency](facility_type)
+    - show me [home health agency](facility_type)
+    - [home health agency](facility_type)
+    - find me a nearby [home health agency](facility_type) my zip code is [10119](location)
+    - find me a nearby [nursing home](facility_type)
+    - show me [nursing home](facility_type)
+    - [nursing home](facility_type)
+    - find me a nearby [nursing home](facility_type) my zip code is [10119](location)
+    - i need a [hospital](facility_type) my zip code is [77494](location)
+    - my zip code is [30277](location) and i need a [nursing home](facility_type)
+    - my zip code is [86602](location) and i need a [hospital](facility_type)
+    - my zip code is [47516](location) and i need a [home health agency](facility_type)
+    - i need a [nursing home](facility_type) at [77474](location)
+    - i need a [hospital](facility_type) at [77474](location)
+    - i need a [home health agency](facility_type) at [77474](location)
+    - i am in [Amarillo](location) and i need a [nursing home](facility_type)
+    - i am in [New York](location) and i need a [hospital](facility_type)
+    - i am in [Las Vegas](location) and i need a [home healt agency](facility_type)
+    - i need a [nursing home](facility_type) in [Katy](location)
+    - i need a [hospital](facility_type) in [Waco](location)
+    - i need a [home health agency](facility_type) in [Clarksville](location)
+    - show me [nursing home](facility_type) in [Knoxville](location)
+    - show me [hospital](facility_type) in [Durham](location)
+    - show me home health](facility_type agency) agency in [Detroit](location)
+    - find me a nearby [home health](facility_type) in [Reno](location)
+    - hi i am in [Tampa](location) i need a [nursing home](facility_type)
+    - hi i am in [San Diego](location) i need a [hospital](facility_type)
+    - hi i am in [Nashville](location) i need a [home health agenc](facility_type)
+    - hi i am in [Sacramento](location) i need a [nursing home](facility_type)
+    - hi i am in [Springfield](location) i need a [hospital](facility_type)
+    - hi i am in [Atlanta](location) i need a [home health agenc](facility_type)
+    - hi i am in [Chicago](location) i need a [nursing home](facility_type)
+    - hi i am in [Santa Cruz](location) i need a [hospital](facility_type)
+    - hi i am in [Boston](location) i need a [home health agenc](facility_type)
+    - hello i am in [Tampa](location) i need a [nursing home](facility_type)
+    - hello i am in [San Diego](location) i need a [hospital](facility_type)
+    - hello i am in [Nashville](location) i need a [home health agenc](facility_type)
+    - hello i am in [Sacramento](location) i need a [nursing home](facility_type)
+    - hello i am in [Springfield](location) i need a [hospital](facility_type)
+    - hello i am in [Atlanta](location) i need a [home health agenc](facility_type)
+    - hello i am in [Chicago](location) i need a [nursing home](facility_type)
+    - hello i am in [Santa Cruz](location) i need a [hospital](facility_type)
+    - hello i am in [Boston](location) i need a [home health agenc](facility_type)
+    - Good morning i am in [Tampa](location) i need a [nursing home](facility_type)
+    - Good morning i am in [San Diego](location) i need a [hospital](facility_type)
+    - Good morning i am in [Nashville](location) i need a [home health agenc](facility_type)
+    - Good morning i am in [Sacramento](location) i need a [nursing home](facility_type)
+    - Good morning i am in [Springfield](location) i need a [hospital](facility_type)
+    - Good morning i am in [Atlanta](location) i need a [home health agenc](facility_type)
+    - Good morning i am in [Chicago](location) i need a [nursing home](facility_type)
+    - Good morning i am in [Santa Cruz](location) i need a [hospital](facility_type)
+    - Good morning i am in [Boston](location) i need a [home health agenc](facility_type)
+    - Hello again i need a [nursing home](facility_type) in [Katy](location)
+    - Hello again i need a [hospital](facility_type) in [Waco](location)
+    - Hello again i need a [home health agency](facility_type) in [Clarksville](location)
+    - Good morning i need a [nursing home](facility_type) in [Katy](location)
+    - Good morning i need a [hospital](facility_type) in [Waco](location)
+    - Good morning i need a [home health agency](facility_type) in [Clarksville](location)
+    - Can you tell me a [nursing home](facility_type) in [Oklahoma City](location) ?
+    - i need a hospital nearby
+    - [Santa Cruz](location)
+    - [Santa cruz](location)
+
+- intent: facility_finder
+  examples: |
+    - I need a hospital in [Delhi](city)
+    - Hospital in [Uttar Pradesh](state)
+    - I need a [Private](facility_type) in [Lucknow](city)
+    - Find me a [Public](facility_type) in [Noida](city)
+    - Tell me some hospital in [Kerala](state)
+    - Show me a [Public](facility_type) in [Gurgaon city](city)
+    - I am hurt. I am need of a hospital in [Kanpur](city)
+    - I am living in [delhi](city) need a [public](facility_type) facility.
+    - Find me hospital in [Kochi](city)
+    - My city is [Pune](city) want a [private](facility_type) hospital
+    - My city is [Kochi](city) want a [private](facility_type) medicare.
+    - I live in [Meerut](city)
+    - i need a hospital nearby.
+    - Hospital [private](facility_type)
+    - [public](facility_type) hospital in [kanpur](city)
+    - [public](facility_type) emergency center.
+    - nearby [public](facility_type) emergency hospital
+    - not feeling well need a [private](facility_type) doctor.
+
+
+stories
+
+
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: tracker path
+  steps:
+  - intent: covid_tracker
+  - action: action_corona_tracker
+
+- story: tracker_1 path
+  steps:
+  - intent: greet
+  - action: utter_botgreet 
+  - intent: what_can_you_do
+  - action: utter_things_do 
+  - intent: covid_tracker_1
+  - action: utter_which_state
+  - intent: covid_tracker
+  - action: action_corona_tracker
+ 
+ 
+- story: tracker_2 path
+  steps:
+  - intent: greet
+  - action: utter_botgreet 
+  - intent: what_can_you_do
+  - action: utter_things_do 
+  - intent: faq_symptoms
+  - action: utter_symptoms
+
+ 
+- story: symptoms path
+  steps:
+  - intent: faq_symptoms
+  - action: utter_symptoms
+
+
+- story: distancing path
+  steps:
+  - intent: faq_distancing
+  - action: utter_distancing
+
+
+- story: spread path
+  steps:
+  - intent: faq_spread
+  - action: utter_spread
+
+- story: covid_info path
+  steps:
+  - intent: covid_info
+  - action: utter_covid_info
+
+- story: covid_people path
+  steps:
+  - intent: covid_people
+  - action: utter_covid_people
+
+- story: hospital search City Happy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: find_facility_types
+  - intent: facility_finder{"facility_type":"Private":"city":"Lucknow"}
+  - action: find_hospitals_name
+  - action: form{"name":"find_hospitals_name"}
+  - action: form{"name":null}
+  - intent: inform{"facility_id":1}
+  - action: find_hospital_address
+  - action: utter_address
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: hospital search state city Happy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: find_facility_types
+  - intent: facility_finder{"facility_type":"Public":"state":"Uttar Pradesh"}
+  - action: utter_ask_city
+  - intent: facility_finder{"city":"Lucknow"}
+  - action: find_hospitals_name
+  - action: form{"name":"find_hospitals_name"}
+  - action: form{"name":null}
+  - intent: inform{"facility_id":1}
+  - action: find_hospital_address
+  - action: utter_address
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: hospital search city happy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: find_facility_types
+  - intent: facility_finder{"city":"Pune"}
+  - action: find_hospitals_name
+  - action: form{"name":"find_hospitals_name"}
+  - action: form{"name":null}
+  - intent: inform{"facility_id":1}
+  - action: find_hospital_address
+  - action: utter_address
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: hospital search state facility city happy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: find_facility_types
+  - intent: facility_finder{"state":"Kerala"}
+  - action: utter_ask_city
+  - intent: facility_finder{"city":"Pune"}
+  - action: find_hospitals_name
+  - action: form{"name":"find_hospitals_name"}
+  - action: form{"name":null}
+  - intent: inform{"facility_id":1}
+  - action: find_hospital_address
+  - action: utter_address
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: happy path multi request
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: find_facility_types
+  - intent: facility_finder{"facility_type":"Private":"city":"Lucknow"}
+  - action: find_hospitals_name
+  - action: form{"name":"find_hospitals_name"}
+  - action: form{"name":null}
+  - intent: inform{"facility_id":1}
+  - action: find_hospital_address
+  - action: utter_address
+  - intent: facility_finder{"facility_type":"Private":"city":"Lucknow"}
+  - action: find_hospitals_name
+  - action: form{"name":"find_hospitals_name"}
+  - action: form{"name":null}
+  - intent: inform{"facility_id":1}
+  - action: find_hospital_address
+  - action: utter_address
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: new story
+  steps:
+    - intent: inform{"facility_type":"Public"}
+    - action: slot{"facility_type":"Public"}
+    - action: utter_ask_city
+    - intent: facility_finder{"city":"Kochi"}
+    - action: slot{"city":"Kochi"}
+    - action: find_hospitals_name
+    - action: form{"name":"find_hospitals_name"}
+    - action: slot{"city":"Kochi"}
+    - action: slot{"facility_type":"Public"}
+    - action: slot{"city":"Kochi"}
+    - action: form{"name":null}
+    - action: slot{"requested_slot":null}
+    - intent: inform{"facility_id":"699"}
+    - action: slot{"facility_id":"699"}
+    - action: find_hospital_address
+    - action: slot{"facility_address":"ofAmrita Institute Of Medical
+                   SciencesisPonekkara Post, Kochi, Kerala, Phone- (484 )
+                   2801234, 285 1234, 400 1234, 681234,  Fax
+                  :0091 (0) 4842802020"}
+    - action: utter_address
+
+
+- story: new story
+  steps:
+    - intent: out_of_scope
+    - action: find_facility_types
+    - intent: inform{"facility_type":"Public"}
+    - action: slot{"facility_type":"Public"}
+    - action: utter_ask_city
+    - intent: search_provider{"city":"Meerut"}
+    - action: slot{"city":"Meerut"}
+    - action: find_hospitals_name
+    - action: form{"name":"find_hospitals_name"}
+    - action: slot{"city":"Meerut"}
+    - action: slot{"facility_type":"Public"}
+    - action: slot{"city":"Meerut"}
+    - action: form{"name":null}
+    - action: slot{"requested_slot":null}
+
+
+- story: new story
+  steps:
+    - intent: inform{"facility_type":"Private"}
+    - action: slot{"facility_type":"Private"}
+    - action: utter_ask_city
+    - intent: facility_finder{"city":"Pune"}
+    - action: slot{"city":"Pune"}
+    - action: find_hospitals_name
+    - action: form{"name":"find_hospitals_name"}
+    - action: slot{"city":"Pune"}
+    - action: slot{"facility_type":"Private"}
+    - action: slot{"city":"Pune"}
+    - action: form{"name":null}
+    - action: slot{"requested_slot":null}
+    - intent: inform{"facility_id":"784"}
+    - action: slot{"facility_id":"784"}
+    - action: find_hospital_address
+    - action: slot{"facility_address":"ofColumbia Asia Hospital,
+                    Puneis22/2A, Near Nyati Empire,Kharadi Bypass Road,
+                    Kharadi,Pune, Maharashtra, Phone- (020) 71290222"}
+    - action: utter_address
+    - intent: thanks
+    - action: utter_goodbye
+
+- story: new story
+  steps:
+    - intent: inform{"facility_type":"Public"}
+    - action: slot{"facility_type":"Public"}
+    - action: slot{"facility_type":"Public"}
+    - action: utter_ask_city
+    - intent: facility_finder{"city":"kochi"}
+    - action: slot{"city":"kochi"}
+    - action: slot{"city":"kochi"}
+    - action: find_hospitals_name
+    - action: form{"name":"find_hospitals_name"}
+    - action: slot{"city":"kochi"}
+    - action: slot{"facility_type":"Public"}
+    - action: slot{"city":"kochi"}
+    - action: form{"name":null}
+    - action: slot{"requested_slot":null}
+    - intent: inform{"facility_id":"701"}
+    - action: slot{"facility_id":"701"}
+    - action: slot{"facility_id":"701"}
+    - action: find_hospital_address
+    - action: slot{"facility_address":" of Sree Narayana Institute Of
+                   Medical Science is Chalakka, P.O. North
+                    Kuthiyathodu, Ernakulam Dist., Kerala, Phone-
+                    (0484) 2573023, 2573060"}
+    - action: utter_address
+    - intent: creator
+    - action: slot{"facility_type":"Public"}
+    - action: slot{"city":"kochi"}
+    - action: slot{"facility_id":"701"}
+    - action: utter_creator
+    - intent: greet
+    - action: utter_greet
+    - action: find_facility_types
+    - intent: inform{"facility_type":"Private"}
+    - action: slot{"facility_type":"Private"}
+    - action: utter_ask_city
+    - intent: thanks
+    - action: utter_goodbye
+
+- story: new story
+  steps:
+    - intent: facility_finder
+    - action: find_facility_types
+    - intent: inform{"facility_type":"Private"}
+    - action: slot{"facility_type":"Private"}
+    - action: utter_ask_city
+    - intent: facility_finder{"city":"delhi"}
+    - action: slot{"city":"delhi"}
+    - action: find_hospitals_name
+    - action: form{"name":"find_hospitals_name"}
+    - action: slot{"city":"delhi"}
+    - action: slot{"facility_type":"Private"}
+    - action: slot{"city":"delhi"}
+    - action: form{"name":null}
+    - action: slot{"requested_slot":null}
+    - intent: inform{"facility_id":"80"}
+    - action: slot{"facility_id":"80"}
+    - action: find_hospital_address
+    - action: slot{"facility_address":" of Action Cancer Hospital is
+                    A - 4, Paschim Vihar, Delhi, Phone- (011) 49222220.
+                    "}
+    - action: utter_address
+
+- story: new story
+  steps:
+    - intent: facility_finder{"city":"Lucknow"}
+    - action: slot{"city":"Lucknow"}
+    - action: slot{"city":"Lucknow"}
+    - action: find_facility_types
+    - action: inform{"facility_type":"Private"}
+    - action: slot{"facility_type":"Private"}
+    - action: find_hospitals_name
+    - action: form{"name":"find_hospitals_name"}
+    - action: slot{"city":"Lucknow"}
+    - action: slot{"facility_type":"Private"}
+    - action: slot{"facility_type":"Private"}
+    - action: form{"name":null}
+    - action: slot{"requested_slot":null}
+    - intent: inform{"facility_id":"995"}
+    - action: slot{"facility_id":"995"}
+    - action: find_hospital_address
+    - action: slot{"facility_address":" of Eye-Q Super Speciality Eye
+                    Hospitals, Aliganj is B-60, Sector-B, Aliganj,
+                    Lucknow, Uttar Pradesh, Phone- (0522) 4024306,
+                    4101710, 2330739"}
+    - action: utter_address
+
+- story: new story
+  steps:
+    - intent: facility_finder{"city":"meerut"}
+    - action: slot{"city":"meerut"}
+    - action: slot{"city":"meerut"}
+    - action: find_facility_types
+    - intent: inform{"facility_type":"Private"}
+    - action: slot{"facility_type":"Private"}
+    - action: slot{"city":"meerut"}
+    - action: slot{"facility_type":"Private"}
+    - action: find_hospitals_name
+    - action: form{"name":"find_hospitals_name"}
+    - action: slot{"city":"meerut"}
+    - action: slot{"facility_type":"Private"}
+    - action: slot{"facility_type":"Private"}
+    - action: form{"name":null}
+    - action: slot{"requested_slot":null}
+    - intent: inform{"facility_id":"999"}
+    - action: slot{"facility_id":"999"}
+    - action: slot{"facility_id":"999"}
+    - action: find_hospital_address
+    - action: slot{"facility_address":"of Metro Hospital And Heart
+                    Institute, Lal Kurti is 47/G-5,Lal Kurty,Boundry
+                    Road,Meerut, Uttar Pradesh, Phone- (0121)
+                    2665033/041/044, Ambulance:09837291010"}
+    - action: utter_address
+    - intent: deny
+    - action: slot{"city":"meerut"}
+    - action: slot{"facility_type":"Private"}
+    - action: slot{"facility_id":"999"}
+    - action: utter_happy
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: new story
+  steps:
+    - intent: inform{"facility_type":"Public"}
+    - action: slot{"facility_type":"Public"}
+    - action: utter_ask_city
+    - intent: facility_finder{"city":"Pune"}
+    - action: slot{"city":"Pune"}
+    - action: find_hospitals_name
+    - action: form{"name":"find_hospitals_name"}
+    - action: slot{"city":"Pune"}
+    - action: slot{"facility_type":"Public"}
+    - action: slot{"city":"Pune"}
+    - action: form{"name":null}
+    - action: slot{"requested_slot":null}
+    - intent: thanks
+    - action: utter_goodbye
+
+- story: new story
+  steps:
+    - intent: facility_finder{"city":"Pune"}
+    - action: slot{"city":"Pune"}
+    - action: slot{"city":"Pune"}
+    - action: find_facility_types
+    - intent: inform{"facility_type":"Public"}
+    - action: slot{"facility_type":"Public"}
+    - action: find_hospitals_name
+    - action: form{"name":"find_hospitals_name"}
+    - action: slot{"city":"Pune"}
+    - action: slot{"facility_type":"Public"}
+    - action: slot{"facility_type":"Public"}
+    - action: form{"name":null}
+    - action: slot{"requested_slot":null}
+    - intent: thanks
+    - action: utter_goodbye
+
+
+
+- story: explain city slot
+  steps:
+  - intent: inform
+  - intent: facility_finder
+  - action: find_hospitals_name
+  - active_loop: find_hospitals_name
+  - slot_was_set:
+    - requested_slot: city
+  - intent: facility_finder
+  - action: utter_ask_city
+  - action: find_hospitals_name
+  - active_loop: null
+
+- story: explain facility_type slot
+  steps:
+  - intent: facility_finder
+  - action: find_hospitals_name
+  - active_loop: find_hospitals_name
+  - slot_was_set:
+    - requested_slot: facility_type
+  - intent: facility_finder
+  - action: utter_ask_facility
+  - action: find_hospitals_name
+  - active_loop: null

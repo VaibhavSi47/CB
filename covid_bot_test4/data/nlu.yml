@@ -1,0 +1,2335 @@
+version: "2.0"
+nlu:
+- intent: nil
+  examples: |
+    - none of these
+    - none of the above
+    - none
+
+- intent: start
+  examples: |
+    - start
+    - lets start
+
+- intent: thanks
+  examples: |
+    - Thanks
+    - Thank you
+    - Thank you so much
+    - Thanks bot
+    - Thanks for that
+    - cheers
+    - cheers bro
+    - ok thanks!
+    - perfect thank you
+    - thanks a bunch for everything
+    - thanks for the help
+    - thanks a lot
+    - amazing, thanks
+    - cool, thanks
+    - cool thank you
+    - Thank you bye
+    - thank u
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: covid_tracker
+  examples: |
+    - number of cases in my area
+    - are there a lot of cases right now?
+    - does the country have a lot of cases?
+    - does the have a lot of cases?
+    - have many people died due to covid-19?
+    - how many cases have there been
+    - how many cases of corona infection have there been?
+    - how many deaths have there been?
+    - how many fatalities have there been?
+    - how many have died due to coronavirus
+    - how many have tested positive?
+    - how many people have been infected
+    - how many people have tested positive
+    - number of cases
+    - what is the fatality number?
+    - what is the fatality rate?
+    - what is the number of cases
+    - what is the number of deaths
+    - what is the number of fatalities?
+    - what is the number of infections?
+    - what number have tested positive?
+    - what number of people have been infected?
+    - what number of people have tested positive?
+    - /covid_tracker_1
+    - corona cases in [karnataka](state)
+    - corona cases in [maharashtra](state)
+    - corona cases in [goa](state)
+    - corona cases in [bihar](state)
+    - corona cases in [punjab](state)
+    - corona cases in [delhi](state)
+    - corona cases in [west bengal](state)
+    - corona cases in [jharkhand](state)
+    - corona cases in [uttar pradesh](state)
+    - corona cases in [kerala](state)
+    - corona cases in [gujarat](state)
+    - corona cases in [rajasthan](state)
+    - corona cases in [tamil nadu](state)
+    - corona cases in [andhra pradesh](state)
+    - corona cases in [telangana](state)
+    - corona cases in [odisha](state)
+    - corona cases in [chhattisgarh](state)
+    - corona cases in [himachal pradesh](state)
+    - corona cases in [haryana](state)
+
+- intent: what_can_you_do
+  examples: |
+    - What all things can you do ?
+    - what are the features of the bot ?
+    - features
+    - features of the bot ?
+    - i m fine just want to know features
+
+##faq intents
+- intent: faq
+  examples: |
+    - i have some questions
+    - questions
+    - frequently asked questions
+    - FAQS
+    - FAQs
+- intent: faq_symptoms
+  examples: |
+    - am i going to die?
+    - am i going to need hospital treatment?
+    - are aches a symptom?
+    - are the symptoms serious?
+    - can i still have it but have no symptoms?
+    - can people die from contacting covid-19?
+    - can people die from contracting covid-19?
+    - can people die from coronavirus?
+    - can people die from this?
+    - can there be complications from covid-19 symptoms?
+    - can you be infected and not show any symptoms?
+    - can you tell me what the symptoms are?
+    - could i be carrying coronavirus if i don't have symptoms?
+    - does everyone have symptoms?
+    - how badly should i be coughing?
+    - how can i identify the symptoms of corona?
+    - how can i tell if i have corona virus?
+    - how do i know i have covid-19?
+    - how do i know i might be a carrier?
+    - how do i know i might have it?
+    - how do i know if i have a high temperature?
+    - how do i know if i have it?
+    - how do i know if i need hospital treatment?
+    - how do i know if i'm a carrier of covid-19?
+    - how do i know if i've caught coronavirus?
+    - how do i know if i've caught it?
+    - how high does my fever have to be for me to go to hospital?
+    - how high is a fever?
+    - how is your body affected by corona?
+    - how long do i have to be sick for before i can go to a clinic?
+    - how long should i have a fever for?
+    - how severe do my symptoms have to be before i go to hospital?
+    - how would my body feel if i caught the virus?
+    - i have a fever, do i have corona?
+    - i'm coughing, what should i do?
+    - is a symptom?
+    - is coughing a symptom of the disease?
+    - is joint pain a symptom?
+    - should i go to a health centre if i have symptoms?
+    - what are the signs and symptoms?
+    - what are the signs of corona?
+    - what are the signs of covid-19?
+    - what are the signs?
+    - what are the symptoms?
+    - what counts as a high temperature?
+    - what do aches and pains mean?
+    - what do the symptoms look like?
+    - what does a high temperature feel like?
+    - what does asymptomatic mean?
+    - what does dry cough mean?
+    - what does having corona feel like?
+    - what does having corona virus feel like?
+    - what does having the virus feel like?
+    - what does it mean if i'm coughing?
+    - what does it mean to be asymptomatic?
+    - what does persistent cough mean?
+    - what does the virus do to your body?
+    - what does this virus do to the body?
+    - what is a dry cough?
+    - what is a fever?
+    - what is a high temperatures?
+    - what is an asymptomatic carrier?
+    - what is different about a dry cough?
+    - what should i do if i think i have it?
+    - what should i do if i think i might have corona virus?
+    - what signs of covid-19 should i look for?
+    - what temperature is a fever?
+    - when do i need to go to a clinic?
+    - when is a cough persistent?
+    - when should i go to hospital?
+    - when should i go to the emergency room?
+    - What Happens If i get  Coronavirus?
+    - What does Coronavirus do?
+    - How does human body behave if i get coronavirus?
+- intent: faq_distancing
+  examples: |
+    - am i going into quarantine?
+    - are there guidelines for how to self-isolate?
+    - can i go for a walk?
+    - can i still go outside?
+    - can i still travel to work?
+    - can i walk somewhere?
+    - do i have to avoid going outside?
+    - do i have to avoid people?
+    - do i have to isolate?
+    - do i have to stay away from people?
+    - do i have to stay inside?
+    - how do i self isolate
+    - how do i socially distance
+    - how does quarantine work?
+    - how does social distancing work?
+    - how far apart should i stay for social distancing?
+    - how long do i have to self-isolate for?
+    - how long do i have to stay inside
+    - how will social distancing help?
+    - should i stay away from people?
+    - what amount of time do i have to self-isolate for?
+    - what are the guidelines for a lockdown?
+    - what are the guidelines for isolating?
+    - what are the guidelines for social-distancing
+    - what counts as essential travel?
+    - what do i have to self-isolate for?
+    - what does social distancing mean?
+    - what essential travel can i still do?
+    - what if i want to go for a walk
+    - what is essential travel?
+    - what is quarantine?
+    - what is self-isolation
+    - what is social distancing
+    - when should i stay in isolation?
+    - who doesn't need to stay at home?
+    - who needs to stay at home?
+    - why do i have to avoid going outside?
+    - why do i have to avoid people?
+    - why do i have to stay inside?
+    - why does social distancing help?
+    - why should i isolate
+    - why should i quarantine myself?
+    - why should most people isolate?
+    - will quarantine work?
+- intent: faq_spread
+  examples: |
+    - can coronavirus spread by coughing?
+    - can coronavirus survive on skin?
+    - can covid get into my eyes?
+    - can sneezing spread coronavirus?
+    - can you catch corona from an unclean surface?
+    - can you catch coronavirus from another person?
+    - can you catch the virus from dirty surfaces?
+    - could i pass corona virus onto someone else?
+    - does coughing spread corona?
+    - does coughing spread covid-19?
+    - does does a virus spread?
+    - how can i avoid covid-19?
+    - how can i avoid getting coronavirus?
+    - how can i protect myself?
+    - how contagious is it?
+    - how did corona become so widespread?
+    - how did covid-19 become so widespread?
+    - how did it become so widespread?
+    - how did this disease become so widespread?
+    - how do i catch corona?
+    - how do viruses become widespread?
+    - how do we stop people getting coronavirus?
+    - how do we stop people getting it?
+    - how do we stop people getting sick?
+    - how do you catch coronavirus
+    - how do you catch it?
+    - how does covid 19 spread?
+    - how does covid pass from person to person?
+    - how does covid spread from person to person?
+    - how does covid-19 spread between between?
+    - how does covid-19 spread from one person to another?- how does covid-19 spread?
+    - how does the virus spread
+    - how is it so contagious?
+    - how long can the virus remain on surfaces?
+    - how long does coronavirus stay on surfaces?
+    - how long does it stay on skin?
+    - how long does the virus stay on your hands face?
+    - how long does the virus stay on your hands?
+    - how would i catch the virus from someone else?
+    - i want to avoid getting covid, what should i do?
+    - is corona virus contagious?
+    - is it contagious?
+    - is this disease very contagious?
+    - what should i do to avoid getting coronavirus?
+    - what should i do to avoid getting covid?
+    - what should i do to protect myself from catching covid19?
+    - what should i do to protect myself?
+    - why can't i touch my face with my hands?
+    - why do you have to clean surfaces?
+    - why is skin-on-skin contact to be avoided?
+    - why shouldn't i touch my eyes?
+    - why shouldn't i touch my face?
+
+- intent: how_spread
+  examples: |
+    - How does COVID-19 spread?
+    - can coronavirus spread by coughing?
+    - can coronavirus survive on skin?
+    - can covid get into my eyes?
+    - can sneezing spread coronavirus?
+    - could i pass corona virus onto someone else?
+    - does coughing spread corona?
+    - does coughing spread covid-19?
+    - how do i catch corona?
+
+- intent: faq_vulnerable
+  examples: |
+    - am i more vulnerable if i have cancer?
+    - are children at risk of coronavirus?
+    - are children vulnerable to corona virus?
+    - are my dogs at risk?
+    - can cats get the virus?
+    - can children get coronavirus?
+    - can children get it?
+    - can dogs get the virus?
+    - can my baby get coronavirus?
+    - can my cat get it?
+    - can pets get the virus?
+    - can your age affect the severity of the illness?
+    - can your age affect the severity?
+    - does my age matter?
+    - does respiratory disease increase my risk?
+    - how many years old are those at risk?
+    - how old are those likely to have a severe reaction?
+    - how what age group is most at risk?
+    - i am pregnant, am i at a higher risk?
+    - i am years old
+    - i am years old, am i at risk?
+    - i have asthma, am i more at risk?
+    - i'm concerned about my parents
+    - i'm pregnant, am i at a higher risk?
+    - i'm worried about my grand parents
+    - should i be worried about my parents?
+    - should i be worried if i'm expecting?
+    - what age group is most vulnerable?
+    - what age range is most at risk?
+    - what are the high risk groups?
+    - what are ventilators for?
+    - what groups are vulnerable?
+    - what if i'm high risk?
+    - what if i'm years old?
+    - what if someone is diabetic?
+    - what people are most likely to experience severe symptoms?
+    - who is most at risk of severe symptoms?
+    - who is most likely to need hospital treatment?
+    - who is most likely to need to go to the hospital?
+    - who might need intensive care?
+    - who might need ventilators?
+    - who should avoid contact during the outbreak?
+    - who should avoid contact?
+    - who should i avoid contact with during the outbreak?
+    - why are older age people more at risk from this illness?
+    - why are symptoms more severe depending on how old i am?
+    - why are symptoms more severe in some people?
+    - why do some people need intensive care?
+    - why do we need ventilators?
+    - why does age affect the severity?
+    - why does my age matter?
+
+- intent: covid_info
+  examples: |
+    - what is covid_19 ?
+    - what is coronavirus ?
+    - what  is sars cov2 ?
+    - what is covid_19 ?
+    - what is coronavirus ?
+    - what  is sars cov2 ?
+    - what does an outbreak mean?
+    - what does covid mean?
+    - what does covid stand for?
+    - what does covid19 mean?
+    - what does covid-19 mean?
+    - what does covid19 stand for?
+    - what does it mean if we have a pandemic?
+    - what does it mean if we have an outbreak?
+    - what does outbreak mean?
+    - what is a pandemic?
+    - what is a virus?
+    - what is an epidemic?
+    - what is corona?
+    - what is covid-19
+    - what is pandemic
+- intent: covid_people
+  examples: |
+    - what happens to people who get covid-19?
+    - what happens if someone get coronavirus?
+    - what happens when someone get covid virus?
+    - people with coronavirus ?
+    - people infected with ccovid-19
+    - what if someone has covid virus infection?
+    - what if some people has been infected by sars cov2?
+- intent: faq_vaccine
+  examples: |
+    - am i immune once i've been vaccinated
+    - are inoculations available?
+    - are they researching vaccines?
+    - are inoculations available?
+    - are they researching vaccines?
+    - are they working on vaccines?
+    - can covid be cured?
+    - can i be vaccinated?
+    - can inoculation protect you from coronavirus?
+    - can researching make a vaccine?
+    - can vaccines protect you from corona?
+    - can you be inoculated against the virus?
+    - can you be inoculated?
+    - can you be vaccinated to protect you from covid-19?
+    - can you be vaccinated?
+    - can you get vaccinated?
+    - how can i be vaccinated?
+    - how does vaccine research work
+    - how long will it take to develop a vaccine?
+    - how long will it take to develop inoculation?
+    - how long will it take to research a vaccine?
+    - is a vaccine being developed?
+    - is there a cure?
+    - is there a vaccine against coronavirus?
+    - is there si cure for covid-19?
+    - what does herd immunity mean?
+    - what is herd immunity
+    - what is inoculation?
+    - when can we expected a vaccine?
+    - when will inoculations be available?
+
+
+  ##SCREENING INTENTS##################################################
+- intent: screening
+  examples: |
+    - I want to get screened .
+    - Do I need to go get tested .
+    - when do i need to go to a clinic?
+    - when should i go to hospital?
+- intent: normal
+  examples: |
+    - normal
+    - i am feeling normal
+    - i have temp between 96°F-98.6°F
+
+- intent: fever
+  examples: |
+    - fever
+    - i am having fever
+    - i have temp between 98.7°F-102°F
+
+- intent: highfever
+  examples: |
+    - high fever
+    - i am having high fever
+    - i have temp >102°F
+
+- intent: drycough
+  examples: |
+    - dry cough
+- intent: shortness_of_breath
+  examples: |
+    - shortness of breath
+    - problem breathing
+    - breathing issue
+    - lack of breath
+    - breathlessness
+- intent: interacted
+  examples: |
+    - i interacted with corona patient recently
+    - i came in contact with covid-19 patient
+- intent: examined
+  examples: |
+    - examined without protection
+- intent: diabetes
+  examples: |
+    - diabetes
+    - sugar
+    - i have diabetes
+    - i am diabetic
+    - have diabetes
+    - suffer from type2 diabetes
+    - have type-1 diabetes
+- intent: hypertension
+  examples: |
+    - hypertension
+    - i have hypertension
+- intent: lung_disease
+  examples: |
+    - i have lung disease
+    - lung disease
+- intent: heart_disease
+  examples: |
+    - i have heart disease
+    - heart disease
+    - i have a problem of heart disease
+- intent: sorethroat
+  examples: |
+    - sore throat
+- intent: no_travel
+  examples: |
+    - no travel
+    - i have not travelled
+    - not travelled
+    - no travelling
+- intent: hbp
+  examples: |
+    - high blood pressure
+    - blood preasure is high
+
+#***************************FACILITIES***********************************
+- intent: facility
+  examples: |
+    - i need facility in [maharashtra](state)
+    - covid19 facility in [goa](state)
+    - facility [Andhra Pradesh](state)
+    - need facility in [mumbai](city)
+    - facility in [Dwarka](city)
+    - facilitys in [chennai](city)
+    - facility find in [delhi](city)
+    - find facility in [surat](city)
+
+- intent: CoVID-19 Testing Lab
+  examples: |
+    - i need testing lab in [goa](state)
+    - covid19 testing lab in [maharashtra](state)
+    - [Bhuj](city) testing lab required
+    - need testing lab in [west bengal](state)
+    - testing lab in [mumbai](city)
+    - covid testing labs in [delhi](city)
+    - find testing labs in [chennai](city)
+    - testing lab in [maharashtra](state)
+    - testing lab in [goa](state)
+    - testing lab in [bihar](state)
+    - testing lab in [punjab](state)
+    - testing lab in [delhi](state)
+    - testing lab in [west bengal](state)
+    - testing lab in [mumbai](city)
+    - testing lab in [pune](city)
+    - testing lab in [delhi](city)
+    - testing lab in [uttar pradesh](state)
+    - testing lab in [sikkim](state)
+    - testing lab in [mizoram](state)
+    - testing lab in [manipur](state)
+    - testing lab in [nagaland](state)
+    - testing lab in [tripura](state)
+    - testing lab in [Port Blair](city)
+    - testing lab in [Hyderabad](city)
+    - testing lab in [Nampally](city)
+    - testing lab in [Secunderabad](city)
+    - testing lab in [Kadapa](city)
+    - testing lab in [Kurnool](city)
+    - testing lab in [Rajahmundry](city)
+    - testing lab in [Vijayawada](city)
+    - testing lab in [Visakhapatnam](city)
+    - testing lab in [Daporijo](city)
+    - testing lab in [Itanagar](city)
+    - testing lab in [Tawang](city)
+    - testing lab in [Barpeta](city)
+    - testing lab in [Dibrugarh](city)
+    - testing lab in [Ghungoor](city)
+    - testing lab in [Guwahati](city)
+    - testing lab in [Jorhat](city)
+    - testing lab in [Tezpur](city)
+    - testing lab in [Muzaffarpur](city)
+    - testing lab in [Darbhanga](city)
+    - testing lab in [Gaya](city)
+    - testing lab in [Patna](city)
+    - testing lab in [Chandigarh](city)
+    - testing lab in [Mohali](city)
+    - testing lab in [Bhilai](city)
+    - testing lab in [Bilaspur](city)
+    - testing lab in [Jagdalpur](city)
+    - testing lab in [Raipur](city)
+    - testing lab in [Silvassa](city)
+    - testing lab in [Daman](city)
+    - testing lab in [Delhi](city)
+    - testing lab in [New Delhi](city)
+    - testing lab in [Goa](state)
+    - testing lab in [Panjim](city)
+    - testing lab in [Ahmedabad](city)
+    - testing lab in [Anand](city)
+    - testing lab in [Bharuch](city)
+    - testing lab in [Bhavnagar](city)
+    - testing lab in [Godhra](city)
+    - testing lab in [Jamnagar](city)
+    - testing lab in [karamsad](city)
+    - testing lab in [Rajkot](city)
+    - testing lab in [Sanand](city)
+    - testing lab in [Surat](city)
+    - testing lab in [Surendranagar](city)
+    - testing lab in [Vadodara](city)
+    - testing lab in [Agroha](city)
+    - testing lab in [Ambala](city)
+    - testing lab in [Bhiwani](city)
+    - testing lab in [Faridabad](city)
+    - testing lab in [Gurgaon](city)
+    - testing lab in [Fatehabad](city)
+    - testing lab in [Hisar](city)
+    - testing lab in [Jhajjar](city)
+    - testing lab in [Jind](city)
+    - testing lab in [Karnal](city)
+    - testing lab in [Kurukshetra](city)
+    - testing lab in [Mahendergarh](city)
+    - testing lab in [Narnaul](city)
+    - testing lab in [Palwal](city)
+    - testing lab in [Panchkula](city)
+    - testing lab in [Panipat](city)
+    - testing lab in [Rewari](city)
+    - testing lab in [Rohtak](city)
+    - testing lab in [Sirsa](city)
+    - testing lab in [Sonipat](city)
+    - testing lab in [Yamunanagar](city)
+    - testing lab in [Kangra](city)
+    - testing lab in [Shimla](city)
+    - testing lab in [Jammu](city)
+    - testing lab in [Srinagar](city)
+    - testing lab in [Hazaribagh](city)
+    - testing lab in [Jamshedpur](city)
+    - testing lab in [Ranchi](city)
+    - testing lab in [Bengaluru](city)
+    - testing lab in [Mangalore](city)
+    - testing lab in [Alappuzha](city)
+    - testing lab in [Cochin](city)
+    - testing lab in [Kannur](city)
+    - testing lab in [Karakonam](city)
+    - testing lab in [Kochi](city)
+    - testing lab in [Kolencherry](city)
+    - testing lab in [Kollam](city)
+    - testing lab in [Kottayam](city)
+    - testing lab in [Kozhikode](city)
+    - testing lab in [Modakkallur](city)
+    - testing lab in [Palakkad](city)
+    - testing lab in [Pathanamthitta](city)
+    - testing lab in [Perintalmanna](city)
+    - testing lab in [Thiruvalla](city)
+    - testing lab in [Thiruvananthapuram](city)
+    - testing lab in [Thrissur](city)
+    - testing lab in [Venjaramoodu](city)
+    - testing lab in [Kavaratti](city)
+    - testing lab in [Indore](city)
+    - testing lab in [Mumbai](city)
+    - testing lab in [Pune](city)
+    - testing lab in [Thane](city)
+    - testing lab in [Imphal](city)
+    - testing lab in [Manipur](city)
+    - testing lab in [Shillong](city)
+    - testing lab in [Aizawl](city)
+    - testing lab in [Kohima](city)
+    - testing lab in [Behrampur](city)
+    - testing lab in [Bhubaneswar](city)
+    - testing lab in [Burla](city)
+    - testing lab in [Cuttack](city)
+    - testing lab in [Rourkela](city)
+    - testing lab in [Gorimedu](city)
+    - testing lab in [Kalapet](city)
+    - testing lab in [Kudupakkam](city)
+    - testing lab in [Madagadipet](city)
+    - testing lab in [Pangoor](city)
+    - testing lab in [Pillaiyarkuppam](city)
+    - testing lab in [Puducherry](city)
+    - testing lab in [Amritsar](city)
+    - testing lab in [Hoshiarpur](city)
+    - testing lab in [Jalandhar](city)
+    - testing lab in [Ludhiana](city)
+    - testing lab in [Patiala](city)
+    - testing lab in [Ropar](city)
+    - testing lab in [Zirakpur](city)
+    - testing lab in [Ajmer](city)
+    - testing lab in [Jaipur](city)
+    - testing lab in [Jodhpur](city)
+    - testing lab in [Gangtok](city)
+    - testing lab in [Chennai](city)
+    - testing lab in [Kanyakumari](city)
+    - testing lab in [Salem](city)
+    - testing lab in [Vellore](city)
+    - testing lab in [Agartala](city)
+    - testing lab in [Agra](city)
+    - testing lab in [Ghaziabad](city)
+    - testing lab in [Greater Noida](city)
+    - testing lab in [Hathras](city)
+    - testing lab in [Kanpur](city)
+    - testing lab in [Lucknow](city)
+    - testing lab in [Meerut](city)
+    - testing lab in [Moradabad](city)
+    - testing lab in [Muzaffarnagar](city)
+    - testing lab in [Noida](city)
+    - testing lab in [Saharanpur](city)
+    - testing lab in [Varanasi](city)
+    - testing lab in [Dehradun](city)
+    - testing lab in [Haldwani](city)
+    - testing lab in [Rishikesh](city)
+    - testing lab in [Roorkee](city)
+    - testing lab in [Kolkata](city)
+    - testing lab in [Andaman & Nicobar Islands](state)
+    - testing lab in [Andhra Pradesh](state)
+    - testing lab in [Arunachal Pradesh](state)
+    - testing lab in [Assam](state)
+    - testing lab in [Bihar](state)
+    - testing lab in [Chhattisgarh](state)
+    - testing lab in [Dadra & Nagar](city)
+    - testing lab in [Daman and Diu](city)
+    - testing lab in [Delhi](city)
+    - testing lab in [Gujarat](state)
+    - testing lab in [Haryana](city)
+    - testing lab in [Himachal Pradesh](state)
+    - testing lab in [Jammu and Kashmir](state)
+    - testing lab in [Jharkhand](state)
+    - testing lab in [Karnataka](city)
+    - testing lab in [Kerala](state)
+    - testing lab in [Lakshadweep](city)
+    - testing lab in [Madhya Pradesh](state)
+    - testing lab in [Maharashtra](state)
+    - testing lab in [Manipur](state)
+    - testing lab in [Meghalaya](state)
+    - testing lab in [Mizoram](state)
+    - testing lab in [Nagaland](state)
+    - testing lab in [Odisha](state)
+    - testing lab in [Punjab](state)
+    - testing lab in [Rajasthan](state)
+    - testing lab in [Sikkim](state)
+    - testing lab in [Tamil Nadu](state)
+    - testing lab in [Tripura](state)
+    - testing lab in [Uttar Pradesh](state)
+    - testing lab in [Uttarakhand](state)
+    - testing lab in [West Bengal](state)
+    - testing lab in [Karnataka](state)
+    - testing lab in [Tamilnadu](state)
+    - testing lab in [Kerala](state)
+    - testing lab in [Pondichhery](state)
+    - testing lab in [Maharastra](state)
+    - testing lab in [Goa](state)
+    - testing lab in [AndhraPradesh](state)
+    - testing lab in [Telangana](state)
+    - testing lab in [MadhyaPradesh](state)
+    - testing lab in [UP](state)
+    - testing lab in [Delhi](state)
+    - testing lab in [Gujrat](state)
+    - testing lab in [Hariyana](state)
+    - testing lab in [HimachalPradesh](state)
+    - testing lab in [Uttarakhand](state)
+    - testing lab in [Jammu and Kashmir](state)
+    - testing lab in [Ladakh](state)
+    - testing lab in [Chattisgarh](state)
+    - testing lab in [Bihar](state)
+    - testing lab in [Jharkhand](state)
+    - testing lab in [Odisha](state)
+    - testing lab in [WestBengal](state)
+    - testing lab in [Sikkim](state)
+    - testing lab in [Assam](state)
+    - testing lab in [Meghalaya](state)
+    - testing lab in [Manipur](state)
+    - testing lab in [Nagaland](state)
+    - testing lab in [Mijoram](state)
+    - testing lab in [Tripura](state)
+    - testing lab in [Arunachal Pradesh](state)
+    - testing lab in [Adoni](city)
+    - testing lab in [Amaravati](city)
+    - testing lab in [Anantapur](city)
+    - testing lab in [Chandragiri](city)
+    - testing lab in [Chittoor](city)
+    - testing lab in [Madgaon](city)
+    - testing lab in [Panaji](city)
+    - testing lab in [Ahmadabad](city)
+    - testing lab in [Amreli](city)
+    - testing lab in [Bharuch](city)
+    - testing lab in [Bhavnagar](city)
+    - testing lab in [Bhuj](city)
+    - testing lab in [Dwarka](city)
+    - testing lab in [Gandhinagar](city)
+    - testing lab in [Godhra](city)
+    - testing lab in [Jamnagar](city)
+    - testing lab in [mumbai](city)
+    - testing lab in [chennai](city)
+
+- intent: hospitals and centers
+  examples: |
+    - i need hospital in [goa](state)
+    - covid19 centers in [Amaravati](city)
+    - hospital near [Meghalaya](state)
+    - [Bhuj](city) need hospital
+    - hospitals in [Panaji](city)
+    - centers [Tripura](state)
+    - find hospital in [Jamnagar](city)
+    - healthcare centers in [maharashtra](state)
+    - healthcare centers in [goa](state)
+    - healthcare centers in [bihar](state)
+    - healthcare centers in [punjab](state)
+    - healthcare centers in [delhi](state)
+    - healthcare centers in [west bengal](state)
+    - healthcare centers in [mumbai](city)
+    - healthcare centers in [pune](city)
+    - healthcare centers in [delhi](city)
+    - healthcare centers in [uttar pradesh](state)
+    - healthcare centers in [sikkim](state)
+    - healthcare centers in [mizoram](state)
+    - healthcare centers in [manipur](state)
+    - healthcare centers in [nagaland](state)
+    - healthcare centers in [tripura](state)
+    - healthcare centers in [Port Blair](city)
+    - healthcare centers in [Hyderabad](city)
+    - healthcare centers in [Nampally](city)
+    - healthcare centers in [Secunderabad](city)
+    - healthcare centers in [Kadapa](city)
+    - healthcare centers in [Kurnool](city)
+    - healthcare centers in [Rajahmundry](city)
+    - healthcare centers in [Vijayawada](city)
+    - healthcare centers in [Visakhapatnam](city)
+    - healthcare centers in [Daporijo](city)
+    - healthcare centers in [Itanagar](city)
+    - healthcare centers in [Tawang](city)
+    - healthcare centers in [Barpeta](city)
+    - healthcare centers in [Dibrugarh](city)
+    - healthcare centers in [Ghungoor](city)
+    - healthcare centers in [Guwahati](city)
+    - healthcare centers in [Jorhat](city)
+    - healthcare centers in [Tezpur](city)
+    - healthcare centers in [Muzaffarpur](city)
+    - healthcare centers in [Darbhanga](city)
+    - healthcare centers in [Gaya](city)
+    - healthcare centers in [Patna](city)
+    - healthcare centers in [Chandigarh](city)
+    - healthcare centers in [Mohali](city)
+    - healthcare centers in [Bhilai](city)
+    - healthcare centers in [Bilaspur](city)
+    - healthcare centers in [Jagdalpur](city)
+    - healthcare centers in [Raipur](city)
+    - healthcare centers in [Silvassa](city)
+    - healthcare centers in [Daman](city)
+    - healthcare centers in [Delhi](city)
+    - healthcare centers in [New Delhi](city)
+    - healthcare centers in [Goa](state)
+    - healthcare centers in [Panjim](city)
+    - healthcare centers in [Ahmedabad](city)
+    - healthcare centers in [Anand](city)
+    - healthcare centers in [Bharuch](city)
+    - healthcare centers in [Bhavnagar](city)
+    - healthcare centers in [Godhra](city)
+    - healthcare centers in [Jamnagar](city)
+    - healthcare centers in [karamsad](city)
+    - healthcare centers in [Rajkot](city)
+    - healthcare centers in [Sanand](city)
+    - healthcare centers in [Surat](city)
+    - healthcare centers in [Surendranagar](city)
+    - healthcare centers in [Vadodara](city)
+    - healthcare centers in [Agroha](city)
+    - healthcare centers in [Ambala](city)
+    - healthcare centers in [Bhiwani](city)
+    - healthcare centers in [Faridabad](city)
+    - healthcare centers in [Gurgaon](city)
+    - healthcare centers in [Fatehabad](city)
+    - healthcare centers in [Hisar](city)
+    - healthcare centers in [Jhajjar](city)
+    - healthcare centers in [Jind](city)
+    - healthcare centers in [Karnal](city)
+    - healthcare centers in [Kurukshetra](city)
+    - healthcare centers in [Mahendergarh](city)
+    - healthcare centers in [Narnaul](city)
+    - healthcare centers in [Palwal](city)
+    - healthcare centers in [Panchkula](city)
+    - healthcare centers in [Panipat](city)
+    - healthcare centers in [Rewari](city)
+    - healthcare centers in [Rohtak](city)
+    - healthcare centers in [Sirsa](city)
+    - healthcare centers in [Sonipat](city)
+    - healthcare centers in [Yamunanagar](city)
+    - healthcare centers in [Kangra](city)
+    - healthcare centers in [Shimla](city)
+    - healthcare centers in [Jammu](city)
+    - healthcare centers in [Srinagar](city)
+    - healthcare centers in [Hazaribagh](city)
+    - healthcare centers in [Jamshedpur](city)
+    - healthcare centers in [Ranchi](city)
+    - healthcare centers in [Bengaluru](city)
+    - healthcare centers in [Mangalore](city)
+    - healthcare centers in [Alappuzha](city)
+    - healthcare centers in [Cochin](city)
+    - healthcare centers in [Kannur](city)
+    - healthcare centers in [Karakonam](city)
+    - healthcare centers in [Kochi](city)
+    - healthcare centers in [Kolencherry](city)
+    - healthcare centers in [Kollam](city)
+    - healthcare centers in [Kottayam](city)
+    - healthcare centers in [Kozhikode](city)
+    - healthcare centers in [Modakkallur](city)
+    - healthcare centers in [Palakkad](city)
+    - healthcare centers in [Pathanamthitta](city)
+    - healthcare centers in [Perintalmanna](city)
+    - healthcare centers in [Thiruvalla](city)
+    - healthcare centers in [Thiruvananthapuram](city)
+    - healthcare centers in [Thrissur](city)
+    - hospital in [Venjaramoodu](city)
+    - hospital in [Kavaratti](city)
+    - hospital in [Indore](city)
+    - hospital in [Mumbai](city)
+    - hospital in [Pune](city)
+    - hospital in [Thane](city)
+    - hospital in [Imphal](city)
+    - hospital in [Manipur](city)
+    - hospital in [Shillong](city)
+    - hospital in [Aizawl](city)
+    - hospital in [Kohima](city)
+    - hospital in [Behrampur](city)
+    - hospital in [Bhubaneswar](city)
+    - hospital in [Burla](city)
+    - hospital in [Cuttack](city)
+    - hospital in [Rourkela](city)
+    - hospital in [Gorimedu](city)
+    - hospital in [Kalapet](city)
+    - hospital in [Kudupakkam](city)
+    - hospital in [Madagadipet](city)
+    - hospital in [Pangoor](city)
+    - hospital in [Pillaiyarkuppam](city)
+    - hospital in [Puducherry](city)
+    - hospital in [Amritsar](city)
+    - hospital in [Hoshiarpur](city)
+    - hospital in [Jalandhar](city)
+    - hospital in [Ludhiana](city)
+    - hospital in [Patiala](city)
+    - hospital in [Ropar](city)
+    - hospital in [Zirakpur](city)
+    - hospital in [Ajmer](city)
+    - hospital in [Jaipur](city)
+    - hospital in [Jodhpur](city)
+    - hospital in [Gangtok](city)
+    - hospital in [Chennai](city)
+    - hospital in [Kanyakumari](city)
+    - hospital in [Salem](city)
+    - hospital in [Vellore](city)
+    - hospital in [Agartala](city)
+    - hospital in [Agra](city)
+    - hospital in [Ghaziabad](city)
+    - hospital in [Greater Noida](city)
+    - hospital in [Hathras](city)
+    - hospital in [Kanpur](city)
+    - hospital in [Lucknow](city)
+    - hospital in [Meerut](city)
+    - hospital in [Moradabad](city)
+    - hospital in [Muzaffarnagar](city)
+    - hospital in [Noida](city)
+    - hospital in [Saharanpur](city)
+    - hospital in [Varanasi](city)
+    - hospital in [Dehradun](city)
+    - hospital in [Haldwani](city)
+    - hospital in [Rishikesh](city)
+    - hospital in [Roorkee](city)
+    - hospital in [Kolkata](city)
+    - hospital in [Andaman & Nicobar Islands](state)
+    - hospital in [Andhra Pradesh](state)
+    - hospital in [Arunachal Pradesh](state)
+    - hospital in [Assam](state)
+    - hospital in [Bihar](state)
+    - hospital in [Chhattisgarh](state)
+    - hospital in [Dadra & Nagar](city)
+    - hospital in [Daman and Diu](city)
+    - hospital in [Delhi](city)
+    - hospital in [Gujarat](state)
+    - hospital in [Haryana](city)
+    - hospital in [Himachal Pradesh](state)
+    - hospital in [Jammu and Kashmir](state)
+    - hospital in [Jharkhand](state)
+    - hospital in [Karnataka](city)
+    - hospital in [Kerala](state)
+    - hospital in [Lakshadweep](city)
+    - hospital in [Madhya Pradesh](state)
+    - hospital in [Maharashtra](state)
+    - hospital in [Manipur](state)
+    - hospital in [Meghalaya](state)
+    - hospital in [Mizoram](state)
+    - hospital in [Nagaland](state)
+    - hospital in [Odisha](state)
+    - hospital in [Punjab](state)
+    - hospital in [Rajasthan](state)
+    - hospital in [Sikkim](state)
+    - hospital in [Tamil Nadu](state)
+    - hospital in [Tripura](state)
+    - hospital in [Uttar Pradesh](state)
+    - hospital in [Uttarakhand](state)
+    - hospital in [West Bengal](state)
+    - hospital in [Karnataka](state)
+    - hospital in [Tamilnadu](state)
+    - hospital in [Kerala](state)
+    - hospital in [Pondichhery](state)
+    - hospital in [Maharastra](state)
+    - hospital in [Goa](state)
+    - hospital in [AndhraPradesh](state)
+    - hospital in [Telangana](state)
+    - hospital in [MadhyaPradesh](state)
+    - hospital in [UP](state)
+    - hospital in [Delhi](state)
+    - hospital in [Gujrat](state)
+    - hospital in [Hariyana](state)
+    - hospital in [HimachalPradesh](state)
+    - hospital in [Uttarakhand](state)
+    - hospital in [Jammu and Kashmir](state)
+    - hospital in [Ladakh](state)
+    - hospital in [Chattisgarh](state)
+    - hospital in [Bihar](state)
+    - hospital in [Jharkhand](state)
+    - hospital in [Odisha](state)
+    - hospital in [WestBengal](state)
+    - hospital in [Sikkim](state)
+    - hospital in [Assam](state)
+    - hospital in [Meghalaya](state)
+    - hospital in [Manipur](state)
+    - hospital in [Nagaland](state)
+    - hospital in [Mijoram](state)
+    - hospital in [Tripura](state)
+    - hospital in [Arunachal Pradesh](state)
+    - hospital in [Adoni](city)
+    - hospital in [Amaravati](city)
+    - hospital in [Anantapur](city)
+    - hospital in [Chandragiri](city)
+    - hospital in [Chittoor](city)
+    - hospital in [Madgaon](city)
+    - hospital in [Panaji](city)
+    - hospital in [Ahmadabad](city)
+    - hospital in [Amreli](city)
+    - hospital in [Bharuch](city)
+    - hospital in [Bhavnagar](city)
+    - hospital in [Bhuj](city)
+    - hospital in [Dwarka](city)
+    - hospital in [Gandhinagar](city)
+    - hospital in [Godhra](city)
+    - hospital in [Jamnagar](city)
+    - hospital in [mumbai](city)
+    - hospital in [chennai](city)
+
+- intent: accommodation and shelter homes
+  examples: |
+    - i need accommodation
+    - covid19 shelter homes in [Nagaland](state)
+    - a shelter homes nearby [Meghalaya](state)
+    - need accommodation in [Chittoor](city)
+    - accommodations
+    - shelter homes in [Godhra](city)
+    - find accommodation in [Kerala](state)
+    - shelter homes in [maharashtra](state)
+    - shelter homes in [goa](state)
+    - shelter homes in [bihar](state)
+    - shelter homes in [punjab](state)
+    - shelter homes in [delhi](state)
+    - shelter homes in [west bengal](state)
+    - shelter homes in [mumbai](city)
+    - shelter homes in [pune](city)
+    - shelter homes in [delhi](city)
+    - shelter homes in [uttar pradesh](state)
+    - shelter homes in [sikkim](state)
+    - shelter homes in [mizoram](state)
+    - shelter homes in [manipur](state)
+    - shelter homes in [nagaland](state)
+    - shelter homes in [tripura](state)
+    - shelter homes in [Port Blair](city)
+    - shelter homes in [Hyderabad](city)
+    - shelter homes in [Nampally](city)
+    - shelter homes in [Secunderabad](city)
+    - shelter homes in [Kadapa](city)
+    - shelter homes in [Kurnool](city)
+    - shelter homes in [Rajahmundry](city)
+    - shelter homes in [Vijayawada](city)
+    - shelter homes in [Visakhapatnam](city)
+    - shelter homes in [Daporijo](city)
+    - shelter homes in [Itanagar](city)
+    - shelter homes in [Tawang](city)
+    - shelter homes in [Barpeta](city)
+    - shelter homes in [Dibrugarh](city)
+    - shelter homes in [Ghungoor](city)
+    - shelter homes in [Guwahati](city)
+    - shelter homes in [Jorhat](city)
+    - shelter homes in [Tezpur](city)
+    - shelter homes in [Muzaffarpur](city)
+    - shelter homes in [Darbhanga](city)
+    - shelter homes in [Gaya](city)
+    - shelter homes in [Patna](city)
+    - shelter homes in [Chandigarh](city)
+    - shelter homes in [Mohali](city)
+    - shelter homes in [Bhilai](city)
+    - shelter homes in [Bilaspur](city)
+    - shelter homes in [Jagdalpur](city)
+    - shelter homes in [Raipur](city)
+    - shelter homes in [Silvassa](city)
+    - shelter homes in [Daman](city)
+    - shelter homes in [Delhi](city)
+    - shelter homes in [New Delhi](city)
+    - shelter homes in [Goa](state)
+    - shelter homes in [Panjim](city)
+    - shelter homes in [Ahmedabad](city)
+    - shelter homes in [Anand](city)
+    - shelter homes in [Bharuch](city)
+    - shelter homes in [Bhavnagar](city)
+    - shelter homes in [Godhra](city)
+    - shelter homes in [Jamnagar](city)
+    - shelter homes in [karamsad](city)
+    - shelter homes in [Rajkot](city)
+    - shelter homes in [Sanand](city)
+    - shelter homes in [Surat](city)
+    - shelter homes in [Surendranagar](city)
+    - shelter homes in [Vadodara](city)
+    - shelter homes in [Agroha](city)
+    - shelter homes in [Ambala](city)
+    - shelter homes in [Bhiwani](city)
+    - shelter homes in [Faridabad](city)
+    - shelter homes in [Gurgaon](city)
+    - shelter homes in [Fatehabad](city)
+    - shelter homes in [Hisar](city)
+    - shelter homes in [Jhajjar](city)
+    - shelter homes in [Jind](city)
+    - shelter homes in [Karnal](city)
+    - shelter homes in [Kurukshetra](city)
+    - shelter homes in [Mahendergarh](city)
+    - shelter homes in [Narnaul](city)
+    - shelter homes in [Palwal](city)
+    - shelter homes in [Panchkula](city)
+    - shelter homes in [Panipat](city)
+    - shelter homes in [Rewari](city)
+    - shelter homes in [Rohtak](city)
+    - shelter homes in [Sirsa](city)
+    - shelter homes in [Sonipat](city)
+    - shelter homes in [Yamunanagar](city)
+    - shelter homes in [Kangra](city)
+    - shelter homes in [Shimla](city)
+    - shelter homes in [Jammu](city)
+    - shelter homes in [Srinagar](city)
+    - shelter homes in [Hazaribagh](city)
+    - shelter homes in [Jamshedpur](city)
+    - shelter homes in [Ranchi](city)
+    - shelter homes in [Bengaluru](city)
+    - shelter homes in [Mangalore](city)
+    - shelter homes in [Alappuzha](city)
+    - shelter homes in [Cochin](city)
+    - shelter homes in [Kannur](city)
+    - shelter homes in [Karakonam](city)
+    - shelter homes in [Kochi](city)
+    - shelter homes in [Kolencherry](city)
+    - shelter homes in [Kollam](city)
+    - shelter homes in [Kottayam](city)
+    - shelter homes in [Kozhikode](city)
+    - shelter homes in [Modakkallur](city)
+    - shelter homes in [Palakkad](city)
+    - shelter homes in [Pathanamthitta](city)
+    - shelter homes in [Perintalmanna](city)
+    - shelter homes in [Thiruvalla](city)
+    - shelter homes in [Thiruvananthapuram](city)
+    - shelter homes in [Thrissur](city)
+    - accommodation in [Venjaramoodu](city)
+    - accommodation in [Kavaratti](city)
+    - accommodation in [Indore](city)
+    - accommodation in [Mumbai](city)
+    - accommodation in [Pune](city)
+    - accommodation in [Thane](city)
+    - accommodation in [Imphal](city)
+    - accommodation in [Manipur](city)
+    - accommodation in [Shillong](city)
+    - accommodation in [Aizawl](city)
+    - accommodation in [Kohima](city)
+    - accommodation in [Behrampur](city)
+    - accommodation in [Bhubaneswar](city)
+    - accommodation in [Burla](city)
+    - accommodation in [Cuttack](city)
+    - accommodation in [Rourkela](city)
+    - accommodation in [Gorimedu](city)
+    - accommodation in [Kalapet](city)
+    - accommodation in [Kudupakkam](city)
+    - accommodation in [Madagadipet](city)
+    - accommodation in [Pangoor](city)
+    - accommodation in [Pillaiyarkuppam](city)
+    - accommodation in [Puducherry](city)
+    - accommodation in [Amritsar](city)
+    - accommodation in [Hoshiarpur](city)
+    - accommodation in [Jalandhar](city)
+    - accommodation in [Ludhiana](city)
+    - accommodation in [Patiala](city)
+    - accommodation in [Ropar](city)
+    - accommodation in [Zirakpur](city)
+    - accommodation in [Ajmer](city)
+    - accommodation in [Jaipur](city)
+    - accommodation in [Jodhpur](city)
+    - accommodation in [Gangtok](city)
+    - accommodation in [Chennai](city)
+    - accommodation in [Kanyakumari](city)
+    - accommodation in [Salem](city)
+    - accommodation in [Vellore](city)
+    - accommodation in [Agartala](city)
+    - accommodation in [Agra](city)
+    - accommodation in [Ghaziabad](city)
+    - accommodation in [Greater Noida](city)
+    - accommodation in [Hathras](city)
+    - accommodation in [Kanpur](city)
+    - accommodation in [Lucknow](city)
+    - accommodation in [Meerut](city)
+    - accommodation in [Moradabad](city)
+    - accommodation in [Muzaffarnagar](city)
+    - accommodation in [Noida](city)
+    - accommodation in [Saharanpur](city)
+    - accommodation in [Varanasi](city)
+    - accommodation in [Dehradun](city)
+    - accommodation in [Haldwani](city)
+    - accommodation in [Rishikesh](city)
+    - accommodation in [Roorkee](city)
+    - accommodation in [Kolkata](city)
+    - accommodation in [Andaman & Nicobar Islands](state)
+    - accommodation in [Andhra Pradesh](state)
+    - accommodation in [Arunachal Pradesh](state)
+    - accommodation in [Assam](state)
+    - accommodation in [Bihar](state)
+    - accommodation in [Chhattisgarh](state)
+    - accommodation in [Dadra & Nagar](city)
+    - accommodation in [Daman and Diu](city)
+    - accommodation in [Delhi](city)
+    - accommodation in [Gujarat](state)
+    - accommodation in [Haryana](city)
+    - accommodation in [Himachal Pradesh](state)
+    - accommodation in [Jammu and Kashmir](state)
+    - accommodation in [Jharkhand](state)
+    - accommodation in [Karnataka](city)
+    - accommodation in [Kerala](state)
+    - accommodation in [Lakshadweep](city)
+    - accommodation in [Madhya Pradesh](state)
+    - accommodation in [Maharashtra](state)
+    - accommodation in [Manipur](state)
+    - accommodation in [Meghalaya](state)
+    - accommodation in [Mizoram](state)
+    - accommodation in [Nagaland](state)
+    - accommodation in [Odisha](state)
+    - accommodation in [Punjab](state)
+    - accommodation in [Rajasthan](state)
+    - accommodation in [Sikkim](state)
+    - accommodation in [Tamil Nadu](state)
+    - accommodation in [Tripura](state)
+    - accommodation in [Uttar Pradesh](state)
+    - accommodation in [Uttarakhand](state)
+    - accommodation in [West Bengal](state)
+    - accommodation in [Karnataka](state)
+    - accommodation in [Tamilnadu](state)
+    - accommodation in [Kerala](state)
+    - accommodation in [Pondichhery](state)
+    - accommodation in [Maharastra](state)
+    - accommodation in [Goa](state)
+    - accommodation in [AndhraPradesh](state)
+    - accommodation in [Telangana](state)
+    - accommodation in [MadhyaPradesh](state)
+    - accommodation in [UP](state)
+    - accommodation in [Delhi](state)
+    - accommodation in [Gujrat](state)
+    - accommodation in [Hariyana](state)
+    - accommodation in [HimachalPradesh](state)
+    - accommodation in [Uttarakhand](state)
+    - accommodation in [Jammu and Kashmir](state)
+    - accommodation in [Ladakh](state)
+    - accommodation in [Chattisgarh](state)
+    - accommodation in [Bihar](state)
+    - accommodation in [Jharkhand](state)
+    - accommodation in [Odisha](state)
+    - accommodation in [WestBengal](state)
+    - accommodation in [Sikkim](state)
+    - accommodation in [Assam](state)
+    - accommodation in [Meghalaya](state)
+    - accommodation in [Manipur](state)
+    - accommodation in [Nagaland](state)
+    - accommodation in [Mijoram](state)
+    - accommodation in [Tripura](state)
+    - accommodation in [Arunachal Pradesh](state)
+    - accommodation in [Adoni](city)
+    - accommodation in [Amaravati](city)
+    - accommodation in [Anantapur](city)
+    - accommodation in [Chandragiri](city)
+    - accommodation in [Chittoor](city)
+    - accommodation in [Madgaon](city)
+    - accommodation in [Panaji](city)
+    - accommodation in [Ahmadabad](city)
+    - accommodation in [Amreli](city)
+    - accommodation in [Bharuch](city)
+    - accommodation in [Bhavnagar](city)
+    - accommodation in [Bhuj](city)
+    - accommodation in [Dwarka](city)
+    - accommodation in [Gandhinagar](city)
+    - accommodation in [Godhra](city)
+    - accommodation in [Jamnagar](city)
+    - accommodation in [mumbai](city)
+    - accommodation in [chennai](city)
+
+- intent: free food
+  examples: |
+    - i need community kitchens in [Ahmadabad](city)
+    - covid19 community kitchen
+    - community kitchen in [Madhya Pradesh](state)
+    - need free food near [Dwarka](city)
+    - free foods in [Chandragiri](city)
+    - free food
+    - [Pondichhery](state) , find free food
+    - find community kitchen
+    - community Kitchen in [maharashtra](state)
+    - community Kitchen in [goa](state)
+    - community Kitchen in [bihar](state)
+    - community Kitchen in [punjab](state)
+    - community Kitchen in [delhi](state)
+    - community Kitchen in [west bengal](state)
+    - community Kitchen in [mumbai](city)
+    - community Kitchen in [pune](city)
+    - community Kitchen in [delhi](city)
+    - community Kitchen in [uttar pradesh](state)
+    - community Kitchen in [sikkim](state)
+    - community Kitchen in [mizoram](state)
+    - community Kitchen in [manipur](state)
+    - community Kitchen in [nagaland](state)
+    - community Kitchen in [tripura](state)
+    - community Kitchen in [Port Blair](city)
+    - community Kitchen in [Hyderabad](city)
+    - community Kitchen in [Nampally](city)
+    - community Kitchen in [Secunderabad](city)
+    - community Kitchen in [Kadapa](city)
+    - community Kitchen in [Kurnool](city)
+    - community Kitchen in [Rajahmundry](city)
+    - community Kitchen in [Vijayawada](city)
+    - community Kitchen in [Visakhapatnam](city)
+    - community Kitchen in [Daporijo](city)
+    - community Kitchen in [Itanagar](city)
+    - community Kitchen in [Tawang](city)
+    - community Kitchen in [Barpeta](city)
+    - community Kitchen in [Dibrugarh](city)
+    - community Kitchen in [Ghungoor](city)
+    - community Kitchen in [Guwahati](city)
+    - community Kitchen in [Jorhat](city)
+    - community Kitchen in [Tezpur](city)
+    - community Kitchen in [Muzaffarpur](city)
+    - community Kitchen in [Darbhanga](city)
+    - community Kitchen in [Gaya](city)
+    - community Kitchen in [Patna](city)
+    - community Kitchen in [Chandigarh](city)
+    - community Kitchen in [Mohali](city)
+    - community Kitchen in [Bhilai](city)
+    - community Kitchen in [Bilaspur](city)
+    - community Kitchen in [Jagdalpur](city)
+    - community Kitchen in [Raipur](city)
+    - community Kitchen in [Silvassa](city)
+    - community Kitchen in [Daman](city)
+    - community Kitchen in [Delhi](city)
+    - community Kitchen in [New Delhi](city)
+    - community Kitchen in [Goa](state)
+    - community Kitchen in [Panjim](city)
+    - community Kitchen in [Ahmedabad](city)
+    - community Kitchen in [Anand](city)
+    - community Kitchen in [Bharuch](city)
+    - community Kitchen in [Bhavnagar](city)
+    - community Kitchen in [Godhra](city)
+    - community Kitchen in [Jamnagar](city)
+    - community Kitchen in [karamsad](city)
+    - community Kitchen in [Rajkot](city)
+    - community Kitchen in [Sanand](city)
+    - community Kitchen in [Surat](city)
+    - community Kitchen in [Surendranagar](city)
+    - community Kitchen in [Vadodara](city)
+    - community Kitchen in [Agroha](city)
+    - community Kitchen in [Ambala](city)
+    - community Kitchen in [Bhiwani](city)
+    - community Kitchen in [Faridabad](city)
+    - community Kitchen in [Gurgaon](city)
+    - community Kitchen in [Fatehabad](city)
+    - community Kitchen in [Hisar](city)
+    - community Kitchen in [Jhajjar](city)
+    - community Kitchen in [Jind](city)
+    - community Kitchen in [Karnal](city)
+    - community Kitchen in [Kurukshetra](city)
+    - community Kitchen in [Mahendergarh](city)
+    - community Kitchen in [Narnaul](city)
+    - community Kitchen in [Palwal](city)
+    - community Kitchen in [Panchkula](city)
+    - community Kitchen in [Panipat](city)
+    - community Kitchen in [Rewari](city)
+    - community Kitchen in [Rohtak](city)
+    - community Kitchen in [Sirsa](city)
+    - community Kitchen in [Sonipat](city)
+    - community Kitchen in [Yamunanagar](city)
+    - community Kitchen in [Kangra](city)
+    - community Kitchen in [Shimla](city)
+    - community Kitchen in [Jammu](city)
+    - community Kitchen in [Srinagar](city)
+    - community Kitchen in [Hazaribagh](city)
+    - community Kitchen in [Jamshedpur](city)
+    - community Kitchen in [Ranchi](city)
+    - community Kitchen in [Bengaluru](city)
+    - community Kitchen in [Mangalore](city)
+    - community Kitchen in [Alappuzha](city)
+    - community Kitchen in [Cochin](city)
+    - community Kitchen in [Kannur](city)
+    - community Kitchen in [Karakonam](city)
+    - community Kitchen in [Kochi](city)
+    - community Kitchen in [Kolencherry](city)
+    - community Kitchen in [Kollam](city)
+    - community Kitchen in [Kottayam](city)
+    - community Kitchen in [Kozhikode](city)
+    - community Kitchen in [Modakkallur](city)
+    - community Kitchen in [Palakkad](city)
+    - community Kitchen in [Pathanamthitta](city)
+    - community Kitchen in [Perintalmanna](city)
+    - community Kitchen in [Thiruvalla](city)
+    - community Kitchen in [Thiruvananthapuram](city)
+    - community Kitchen in [Thrissur](city)
+    - free food in [Venjaramoodu](city)
+    - free food in [Kavaratti](city)
+    - free food in [Indore](city)
+    - free food in [Mumbai](city)
+    - free food in [Pune](city)
+    - free food in [Thane](city)
+    - free food in [Imphal](city)
+    - free food in [Manipur](city)
+    - free food in [Shillong](city)
+    - free food in [Aizawl](city)
+    - free food in [Kohima](city)
+    - free food in [Behrampur](city)
+    - free food in [Bhubaneswar](city)
+    - free food in [Burla](city)
+    - free food in [Cuttack](city)
+    - free food in [Rourkela](city)
+    - free food in [Gorimedu](city)
+    - free food in [Kalapet](city)
+    - free food in [Kudupakkam](city)
+    - free food in [Madagadipet](city)
+    - free food in [Pangoor](city)
+    - free food in [Pillaiyarkuppam](city)
+    - free food in [Puducherry](city)
+    - free food in [Amritsar](city)
+    - free food in [Hoshiarpur](city)
+    - free food in [Jalandhar](city)
+    - free food in [Ludhiana](city)
+    - free food in [Patiala](city)
+    - free food in [Ropar](city)
+    - free food in [Zirakpur](city)
+    - free food in [Ajmer](city)
+    - free food in [Jaipur](city)
+    - free food in [Jodhpur](city)
+    - free food in [Gangtok](city)
+    - free food in [Chennai](city)
+    - free food in [Kanyakumari](city)
+    - free food in [Salem](city)
+    - free food in [Vellore](city)
+    - free food in [Agartala](city)
+    - free food in [Agra](city)
+    - free food in [Ghaziabad](city)
+    - free food in [Greater Noida](city)
+    - free food in [Hathras](city)
+    - free food in [Kanpur](city)
+    - free food in [Lucknow](city)
+    - free food in [Meerut](city)
+    - free food in [Moradabad](city)
+    - free food in [Muzaffarnagar](city)
+    - free food in [Noida](city)
+    - free food in [Saharanpur](city)
+    - free food in [Varanasi](city)
+    - free food in [Dehradun](city)
+    - free food in [Haldwani](city)
+    - free food in [Rishikesh](city)
+    - free food in [Roorkee](city)
+    - free food in [Kolkata](city)
+    - free food in [Andaman & Nicobar Islands](state)
+    - free food in [Andhra Pradesh](state)
+    - free food in [Arunachal Pradesh](state)
+    - free food in [Assam](state)
+    - free food in [Bihar](state)
+    - free food in [Chhattisgarh](state)
+    - free food in [Dadra & Nagar](city)
+    - free food in [Daman and Diu](city)
+    - free food in [Delhi](city)
+    - free food in [Gujarat](state)
+    - free food in [Haryana](city)
+    - free food in [Himachal Pradesh](state)
+    - free food in [Jammu and Kashmir](state)
+    - free food in [Jharkhand](state)
+    - free food in [Karnataka](city)
+    - free food in [Kerala](state)
+    - free food in [Lakshadweep](city)
+    - free food in [Madhya Pradesh](state)
+    - free food in [Maharashtra](state)
+    - free food in [Manipur](state)
+    - free food in [Meghalaya](state)
+    - free food in [Mizoram](state)
+    - free food in [Nagaland](state)
+    - free food in [Odisha](state)
+    - free food in [Punjab](state)
+    - free food in [Rajasthan](state)
+    - free food in [Sikkim](state)
+    - free food in [Tamil Nadu](state)
+    - free food in [Tripura](state)
+    - free food in [Uttar Pradesh](state)
+    - free food in [Uttarakhand](state)
+    - free food in [West Bengal](state)
+    - free food in [Karnataka](state)
+    - free food in [Tamilnadu](state)
+    - free food in [Kerala](state)
+    - free food in [Pondichhery](state)
+    - free food in [Maharastra](state)
+    - free food in [Goa](state)
+    - free food in [AndhraPradesh](state)
+    - free food in [Telangana](state)
+    - free food in [MadhyaPradesh](state)
+    - free food in [UP](state)
+    - free food in [Delhi](state)
+    - free food in [Gujrat](state)
+    - free food in [Hariyana](state)
+    - free food in [HimachalPradesh](state)
+    - free food in [Uttarakhand](state)
+    - free food in [Jammu and Kashmir](state)
+    - free food in [Ladakh](state)
+    - free food in [Chattisgarh](state)
+    - free food in [Bihar](state)
+    - free food in [Jharkhand](state)
+    - free food in [Odisha](state)
+    - free food in [WestBengal](state)
+    - free food in [Sikkim](state)
+    - free food in [Assam](state)
+    - free food in [Meghalaya](state)
+    - free food in [Manipur](state)
+    - free food in [Nagaland](state)
+    - free food in [Mijoram](state)
+    - free food in [Tripura](state)
+    - free food in [Arunachal Pradesh](state)
+    - free food in [Adoni](city)
+    - free food in [Amaravati](city)
+    - free food in [Anantapur](city)
+    - free food in [Chandragiri](city)
+    - free food in [Chittoor](city)
+    - free food in [Madgaon](city)
+    - free food in [Panaji](city)
+    - free food in [Ahmadabad](city)
+    - free food in [Amreli](city)
+    - free food in [Bharuch](city)
+    - free food in [Bhavnagar](city)
+    - free food in [Bhuj](city)
+    - free food in [Dwarka](city)
+    - free food in [Gandhinagar](city)
+    - free food in [Godhra](city)
+    - free food in [Jamnagar](city)
+    - free food in [mumbai](city)
+    - free food in [chennai](city)
+
+#***************************EMERGENCY***********************************
+- intent: emergency
+  examples: |
+    - emergency
+    - need help
+    - emergenc
+    - help needed
+    - help nearby
+
+- intent: Police
+  examples: |
+     - police station in [maharashtra](state)
+     - police station in [goa](state)
+     - police station in [bihar](state)
+     - police station in [punjab](state)
+     - police station in [delhi](state)
+     - police station in [west bengal](state)
+     - police station in [mumbai](city)
+     - police station in [pune](city)
+     - police station in [delhi](city)
+     - police station in [uttar pradesh](state)
+     - police station in [sikkim](state)
+     - police station in [mizoram](state)
+     - police station in [manipur](state)
+     - police station in [nagaland](state)
+     - police station in [tripura](state)
+     - police station in [Port Blair](city)
+     - police station in [Hyderabad](city)
+     - police station in [Nampally](city)
+     - police station in [Secunderabad](city)
+     - police station in [Kadapa](city)
+     - police station in [Kurnool](city)
+     - police station in [Rajahmundry](city)
+     - police station in [Vijayawada](city)
+     - police station in [Visakhapatnam](city)
+     - police station in [Daporijo](city)
+     - police station in [Itanagar](city)
+     - police station in [Tawang](city)
+     - police station in [Barpeta](city)
+     - police station in [Dibrugarh](city)
+     - police station in [Ghungoor](city)
+     - police station in [Guwahati](city)
+     - police station in [Jorhat](city)
+     - police station in [Tezpur](city)
+     - police station in [Muzaffarpur](city)
+     - police station in [Darbhanga](city)
+     - police station in [Gaya](city)
+     - police station in [Patna](city)
+     - police station in [Chandigarh](city)
+     - police station in [Mohali](city)
+     - police station in [Bhilai](city)
+     - police station in [Bilaspur](city)
+     - police station in [Jagdalpur](city)
+     - police station in [Raipur](city)
+     - police station in [Silvassa](city)
+     - police station in [Daman](city)
+     - police station in [Delhi](city)
+     - police station in [New Delhi](city)
+     - police station in [Goa](state)
+     - police station in [Panjim](city)
+     - police station in [Ahmedabad](city)
+     - police station in [Anand](city)
+     - police station in [Bharuch](city)
+     - police station in [Bhavnagar](city)
+     - police station in [Godhra](city)
+     - police station in [Jamnagar](city)
+     - police station in [karamsad](city)
+     - police station in [Rajkot](city)
+     - police station in [Sanand](city)
+     - police station in [Surat](city)
+     - police station in [Surendranagar](city)
+     - police station in [Vadodara](city)
+     - police station in [Agroha](city)
+     - police station in [Ambala](city)
+     - police station in [Bhiwani](city)
+     - police station in [Faridabad](city)
+     - police station in [Gurgaon](city)
+     - police station in [Fatehabad](city)
+     - police station in [Hisar](city)
+     - police station in [Jhajjar](city)
+     - police station in [Jind](city)
+     - police station in [Karnal](city)
+     - police station in [Kurukshetra](city)
+     - police station in [Mahendergarh](city)
+     - police station in [Narnaul](city)
+     - police station in [Palwal](city)
+     - police station in [Panchkula](city)
+     - police station in [Panipat](city)
+     - police station in [Rewari](city)
+     - police station in [Rohtak](city)
+     - police station in [Sirsa](city)
+     - police station in [Sonipat](city)
+     - police station in [Yamunanagar](city)
+     - police station in [Kangra](city)
+     - police station in [Shimla](city)
+     - police station in [Jammu](city)
+     - police station in [Srinagar](city)
+     - police station in [Hazaribagh](city)
+     - police station in [Jamshedpur](city)
+     - police station in [Ranchi](city)
+     - police station in [Bengaluru](city)
+     - police station in [Mangalore](city)
+     - police station in [Alappuzha](city)
+     - police station in [Cochin](city)
+     - police station in [Kannur](city)
+     - police station in [Karakonam](city)
+     - police station in [Kochi](city)
+     - police station in [Kolencherry](city)
+     - police station in [Kollam](city)
+     - police station in [Kottayam](city)
+     - police station in [Kozhikode](city)
+     - police station in [Modakkallur](city)
+     - police station in [Palakkad](city)
+     - police station in [Pathanamthitta](city)
+     - police station in [Perintalmanna](city)
+     - police station in [Thiruvalla](city)
+     - police station in [Thiruvananthapuram](city)
+     - police station in [Thrissur](city)
+     - police nearby in [Venjaramoodu](city)
+     - police nearby in [Kavaratti](city)
+     - police nearby in [Indore](city)
+     - police nearby in [Mumbai](city)
+     - police nearby in [Pune](city)
+     - police nearby in [Thane](city)
+     - police nearby in [Imphal](city)
+     - police nearby in [Manipur](city)
+     - police nearby in [Shillong](city)
+     - police nearby in [Aizawl](city)
+     - police nearby in [Kohima](city)
+     - police nearby in [Behrampur](city)
+     - police nearby in [Bhubaneswar](city)
+     - police nearby in [Burla](city)
+     - police nearby in [Cuttack](city)
+     - police nearby in [Rourkela](city)
+     - police nearby in [Gorimedu](city)
+     - police nearby in [Kalapet](city)
+     - police nearby in [Kudupakkam](city)
+     - police nearby in [Madagadipet](city)
+     - police nearby in [Pangoor](city)
+     - police nearby in [Pillaiyarkuppam](city)
+     - police nearby in [Puducherry](city)
+     - police nearby in [Amritsar](city)
+     - police nearby in [Hoshiarpur](city)
+     - police nearby in [Jalandhar](city)
+     - police nearby in [Ludhiana](city)
+     - police nearby in [Patiala](city)
+     - police nearby in [Ropar](city)
+     - police nearby in [Zirakpur](city)
+     - police nearby in [Ajmer](city)
+     - police nearby in [Jaipur](city)
+     - police nearby in [Jodhpur](city)
+     - police nearby in [Gangtok](city)
+     - police nearby in [Chennai](city)
+     - police nearby in [Kanyakumari](city)
+     - police nearby in [Salem](city)
+     - police nearby in [Vellore](city)
+     - police nearby in [Agartala](city)
+     - police nearby in [Agra](city)
+     - police nearby in [Ghaziabad](city)
+     - police nearby in [Greater Noida](city)
+     - police nearby in [Hathras](city)
+     - police nearby in [Kanpur](city)
+     - police nearby in [Lucknow](city)
+     - police nearby in [Meerut](city)
+     - police nearby in [Moradabad](city)
+     - police nearby in [Muzaffarnagar](city)
+     - police nearby in [Noida](city)
+     - police nearby in [Saharanpur](city)
+     - police nearby in [Varanasi](city)
+     - police nearby in [Dehradun](city)
+     - police nearby in [Haldwani](city)
+     - police nearby in [Rishikesh](city)
+     - police nearby in [Roorkee](city)
+     - police emergency in [Kolkata](city)
+     - police emergency in [Andaman & Nicobar Islands](state)
+     - police emergency in [Andhra Pradesh](state)
+     - police emergency in [Arunachal Pradesh](state)
+     - police emergency in [Assam](state)
+     - police emergency in [Bihar](state)
+     - police emergency in [Chhattisgarh](state)
+     - police emergency in [Dadra & Nagar](city)
+     - police emergency in [Daman and Diu](city)
+     - police emergency in [Delhi](city)
+     - police emergency in [Gujarat](state)
+     - police emergency in [Haryana](city)
+     - police emergency in [Himachal Pradesh](state)
+     - police emergency in [Jammu and Kashmir](state)
+     - police emergency in [Jharkhand](state)
+     - police emergency in [Karnataka](city)
+     - police emergency in [Kerala](state)
+     - police emergency in [Lakshadweep](city)
+     - police emergency in [Madhya Pradesh](state)
+     - police emergency in [Maharashtra](state)
+     - police emergency in [Manipur](state)
+     - police emergency in [Meghalaya](state)
+     - police emergency in [Mizoram](state)
+     - police emergency in [Nagaland](state)
+     - police emergency in [Odisha](state)
+     - police emergency in [Punjab](state)
+     - need police help in [Rajasthan](state)
+     - need police help in [Sikkim](state)
+     - need police help in [Tamil Nadu](state)
+     - need police help in [Tripura](state)
+     - need police help in [Uttar Pradesh](state)
+     - need police help in [Uttarakhand](state)
+     - need police help in [West Bengal](state)
+     - need police support in [Karnataka](state)
+     - need police support in [Tamilnadu](state)
+     - need police support in [Kerala](state)
+     - need police support in [Pondichhery](state)
+     - need police support in [Maharastra](state)
+     - need police support in [Goa](state)
+     - need police support in [AndhraPradesh](state)
+     - need police support in [Telangana](state)
+     - need police support in [MadhyaPradesh](state)
+     - need police help in [UP](state)
+     - need police help in [Delhi](state)
+     - need police help in [Gujrat](state)
+     - need police help in [Hariyana](state)
+     - need police in [HimachalPradesh](state)
+     - need police in [Uttarakhand](state)
+     - need police in [Jammu and Kashmir](state)
+     - need police in [Ladakh](state)
+     - need police in [Chattisgarh](state)
+     - need police in [Bihar](state)
+     - need police in [Jharkhand](state)
+     - need police in [Odisha](state)
+     - need police in [WestBengal](state)
+     - need police in [Sikkim](state)
+     - need police in [Assam](state)
+     - need police in [Meghalaya](state)
+     - need police in [Manipur](state)
+     - need police in [Nagaland](state)
+     - need police in [Mijoram](state)
+     - need police in [Tripura](state)
+     - need police in [Arunachal Pradesh](state)
+     - need police in [Adoni](city)
+     - need police in [Amaravati](city)
+     - need police in [Anantapur](city)
+     - need police in [Chandragiri](city)
+     - need police in [Chittoor](city)
+     - need police in [Madgaon](city)
+     - need police in [Panaji](city)
+     - need police in [Ahmadabad](city)
+     - need police in [Amreli](city)
+     - need police in [Bharuch](city)
+     - need police in [Bhavnagar](city)
+     - need police in [Bhuj](city)
+     - need police in [Dwarka](city)
+     - need police in [Gandhinagar](city)
+     - need police in [Godhra](city)
+     - need police in [Jamnagar](city)
+     - need police in [mumbai](city)
+     - need police in [chennai](city)
+
+- intent: Government_Helpline
+  examples: |
+    - government helpline in [maharashtra](state)
+    - government helpline in [goa](state)
+    - government helpline in [bihar](state)
+    - government helpline in [punjab](state)
+    - government helpline in [delhi](state)
+    - government helpline in [west bengal](state)
+    - government helpline in [mumbai](city)
+    - government helpline in [pune](city)
+    - government helpline in [delhi](city)
+    - government helpline in [uttar pradesh](state)
+    - government helpline in [sikkim](state)
+    - government helpline in [mizoram](state)
+    - government helpline in [manipur](state)
+    - government helpline in [nagaland](state)
+    - government helpline in [tripura](state)
+    - government helpline in [Port Blair](city)
+    - government helpline in [Hyderabad](city)
+    - government helpline in [Nampally](city)
+    - government helpline in [Secunderabad](city)
+    - government helpline in [Kadapa](city)
+    - government helpline in [Kurnool](city)
+    - government helpline in [Rajahmundry](city)
+    - government helpline in [Vijayawada](city)
+    - government helpline in [Visakhapatnam](city)
+    - government helpline in [Daporijo](city)
+    - government helpline in [Itanagar](city)
+    - government helpline in [Tawang](city)
+    - government helpline in [Barpeta](city)
+    - government helpline in [Dibrugarh](city)
+    - government helpline in [Ghungoor](city)
+    - government helpline in [Guwahati](city)
+    - government helpline in [Jorhat](city)
+    - government helpline in [Tezpur](city)
+    - government helpline in [Muzaffarpur](city)
+    - government helpline in [Darbhanga](city)
+    - government helpline in [Gaya](city)
+    - government helpline in [Patna](city)
+    - government helpline in [Chandigarh](city)
+    - government helpline in [Mohali](city)
+    - government helpline in [Bhilai](city)
+    - government helpline in [Bilaspur](city)
+    - government helpline in [Jagdalpur](city)
+    - government helpline in [Raipur](city)
+    - government helpline in [Silvassa](city)
+    - government helpline in [Daman](city)
+    - government helpline in [Delhi](city)
+    - government helpline in [New Delhi](city)
+    - government helpline in [Goa](state)
+    - government helpline in [Panjim](city)
+    - government helpline in [Ahmedabad](city)
+    - government helpline in [Anand](city)
+    - government helpline in [Bharuch](city)
+    - government helpline in [Bhavnagar](city)
+    - government helpline in [Godhra](city)
+    - government helpline in [Jamnagar](city)
+    - government helpline in [karamsad](city)
+    - government helpline in [Rajkot](city)
+    - government helpline in [Sanand](city)
+    - government helpline in [Surat](city)
+    - government helpline in [Surendranagar](city)
+    - government helpline in [Vadodara](city)
+    - government helpline in [Agroha](city)
+    - government helpline in [Ambala](city)
+    - government helpline in [Bhiwani](city)
+    - government helpline in [Faridabad](city)
+    - government helpline in [Gurgaon](city)
+    - government helpline in [Fatehabad](city)
+    - government helpline in [Hisar](city)
+    - government helpline in [Jhajjar](city)
+    - government helpline in [Jind](city)
+    - government helpline in [Karnal](city)
+    - government helpline in [Kurukshetra](city)
+    - government helpline in [Mahendergarh](city)
+    - government helpline in [Narnaul](city)
+    - government helpline in [Palwal](city)
+    - government helpline in [Panchkula](city)
+    - government helpline in [Panipat](city)
+    - government helpline in [Rewari](city)
+    - government helpline in [Rohtak](city)
+    - government helpline in [Sirsa](city)
+    - government helpline in [Sonipat](city)
+    - government helpline in [Yamunanagar](city)
+    - government helpline in [Kangra](city)
+    - government helpline in [Shimla](city)
+    - government helpline in [Jammu](city)
+    - government helpline in [Srinagar](city)
+    - government helpline in [Hazaribagh](city)
+    - government helpline in [Jamshedpur](city)
+    - government helpline in [Ranchi](city)
+    - government helpline in [Bengaluru](city)
+    - government helpline in [Mangalore](city)
+    - government helpline in [Alappuzha](city)
+    - government helpline in [Cochin](city)
+    - government helpline in [Kannur](city)
+    - government helpline in [Karakonam](city)
+    - government helpline in [Kochi](city)
+    - government helpline in [Kolencherry](city)
+    - government helpline in [Kollam](city)
+    - government helpline in [Kottayam](city)
+    - government helpline in [Kozhikode](city)
+    - government helpline in [Modakkallur](city)
+    - government helpline in [Palakkad](city)
+    - government helpline in [Pathanamthitta](city)
+    - government helpline in [Perintalmanna](city)
+    - government helpline in [Thiruvalla](city)
+    - government helpline in [Thiruvananthapuram](city)
+    - government helpline in [Thrissur](city)
+    - government help in [Venjaramoodu](city)
+    - government help in [Kavaratti](city)
+    - government help in [Indore](city)
+    - government help in [Mumbai](city)
+    - government help in [Pune](city)
+    - government help in [Thane](city)
+    - government help in [Imphal](city)
+    - government help in [Manipur](city)
+    - government help in [Shillong](city)
+    - government help in [Aizawl](city)
+    - government help in [Kohima](city)
+    - government help in [Behrampur](city)
+    - government help in [Bhubaneswar](city)
+    - government help in [Burla](city)
+    - government help in [Cuttack](city)
+    - government help in [Rourkela](city)
+    - government help in [Gorimedu](city)
+    - government help in [Kalapet](city)
+    - government help in [Kudupakkam](city)
+    - government help in [Madagadipet](city)
+    - government help in [Pangoor](city)
+    - government help in [Pillaiyarkuppam](city)
+    - government help in [Puducherry](city)
+    - government help in [Amritsar](city)
+    - government help in [Hoshiarpur](city)
+    - government help in [Jalandhar](city)
+    - government help in [Ludhiana](city)
+    - government help in [Patiala](city)
+    - government help in [Ropar](city)
+    - government help in [Zirakpur](city)
+    - government help in [Ajmer](city)
+    - government help in [Jaipur](city)
+    - government help in [Jodhpur](city)
+    - government help in [Gangtok](city)
+    - government help in [Chennai](city)
+    - government help in [Kanyakumari](city)
+    - government help in [Salem](city)
+    - government help in [Vellore](city)
+    - government help in [Agartala](city)
+    - government help in [Agra](city)
+    - government help in [Ghaziabad](city)
+    - government help in [Greater Noida](city)
+    - government help in [Hathras](city)
+    - government help in [Kanpur](city)
+    - government help in [Lucknow](city)
+    - government help in [Meerut](city)
+    - government help in [Moradabad](city)
+    - government help in [Muzaffarnagar](city)
+    - government help in [Noida](city)
+    - government help in [Saharanpur](city)
+    - government help in [Varanasi](city)
+    - government help in [Dehradun](city)
+    - government help in [Haldwani](city)
+    - government help in [Rishikesh](city)
+    - government help in [Roorkee](city)
+    - emergency government helpline [Kolkata](city)
+    - emergency government helpline [Andaman & Nicobar Islands](state)
+    - emergency government helpline [Andhra Pradesh](state)
+    - emergency government helpline [Arunachal Pradesh](state)
+    - emergency government helpline [Assam](state)
+    - emergency government helpline [Bihar](state)
+    - emergency government helpline [Chhattisgarh](state)
+    - emergency government helpline [Dadra & Nagar](city)
+    - emergency government helpline [Daman and Diu](city)
+    - emergency government helpline [Delhi](city)
+    - emergency government helpline [Gujarat](state)
+    - emergency government helpline [Haryana](city)
+    - emergency government helpline [Himachal Pradesh](state)
+    - emergency government helpline [Jammu and Kashmir](state)
+    - emergency government helpline [Jharkhand](state)
+    - emergency government helpline [Karnataka](city)
+    - emergency government helpline [Kerala](state)
+    - emergency government helpline [Lakshadweep](city)
+    - emergency government helpline [Madhya Pradesh](state)
+    - emergency government helpline [Maharashtra](state)
+    - emergency government helpline [Manipur](state)
+    - emergency government helpline [Meghalaya](state)
+    - emergency government helpline [Mizoram](state)
+    - emergency government helpline [Nagaland](state)
+    - emergency government helpline [Odisha](state)
+    - emergency government helpline [Punjab](state)
+    - covid gov helpline [Rajasthan](state)
+    - covid gov helpline [Sikkim](state)
+    - covid gov helpline [Tamil Nadu](state)
+    - covid gov helpline [Tripura](state)
+    - covid gov helpline [Uttar Pradesh](state)
+    - covid gov helpline [Uttarakhand](state)
+    - covid gov helpline [West Bengal](state)
+    - covid gov helpline [Karnataka](state)
+    - covid gov helpline [Tamilnadu](state)
+    - covid gov helpline [Kerala](state)
+    - covid gov helpline [Pondichhery](state)
+    - covid gov helpline [Maharastra](state)
+    - covid gov helpline [Goa](state)
+    - covid gov helpline [AndhraPradesh](state)
+    - covid gov helpline [Telangana](state)
+    - covid gov helpline [MadhyaPradesh](state)
+    - covid gov helpline [UP](state)
+    - covid gov helpline [Delhi](state)
+    - covid gov helpline [Gujrat](state)
+    - covid gov helpline [Hariyana](state)
+    - covid19 guildlines gov helpline [HimachalPradesh](state)
+    - covid19 guildlines gov helpline [Uttarakhand](state)
+    - covid19 guildlines gov helpline [Jammu and Kashmir](state)
+    - covid19 guildlines gov helpline [Ladakh](state)
+    - covid19 guildlines gov helpline [Chattisgarh](state)
+    - covid19 guildlines gov helpline [Bihar](state)
+    - covid19 guildlines gov helpline [Jharkhand](state)
+    - covid19 guildlines gov helpline [Odisha](state)
+    - covid19 guildlines gov helpline [WestBengal](state)
+    - covid19 guildlines gov helpline [Sikkim](state)
+    - covid19 guildlines gov helpline [Assam](state)
+    - covid19 guildlines gov helpline [Meghalaya](state)
+    - covid19 guildlines gov helpline [Manipur](state)
+    - covid19 guildlines gov helpline [Nagaland](state)
+    - covid19 guildlines gov helpline [Mijoram](state)
+    - covid19 guildlines gov helpline [Tripura](state)
+    - covid19 guildlines gov helpline [Arunachal Pradesh](state)
+    - covid19 guildlines gov helpline [Adoni](city)
+    - covid19 guildlines gov helpline [Amaravati](city)
+    - covid19 guildlines gov helpline [Anantapur](city)
+    - covid19 guildlines gov helpline [Chandragiri](city)
+    - covid19 guildlines gov helpline [Chittoor](city)
+    - covid19 guildlines gov helpline [Madgaon](city)
+    - covid19 guildlines gov helpline [Panaji](city)
+    - covid19 guildlines gov helpline [Ahmadabad](city)
+    - covid19 guildlines gov helpline [Amreli](city)
+    - covid19 guildlines gov helpline [Bharuch](city)
+    - covid19 guildlines gov helpline [Bhavnagar](city)
+    - covid19 guildlines gov helpline [Bhuj](city)
+    - covid19 guildlines gov helpline [Dwarka](city)
+    - covid19 guildlines gov helpline [Gandhinagar](city)
+    - covid19 guildlines gov helpline [Godhra](city)
+    - covid19 guildlines gov helpline [Jamnagar](city)
+    - covid19 guildlines gov helpline [mumbai](city)
+    - covid19 guildlines gov helpline [chennai](city)
+
+- intent: Ambulance
+  examples: |
+    - need an ambulance in [maharashtra](state)
+    - need an ambulance in [goa](state)
+    - need an ambulance in [bihar](state)
+    - need an ambulance in [punjab](state)
+    - need an ambulance in [delhi](state)
+    - need an ambulance in [west bengal](state)
+    - need an ambulance in [mumbai](city)
+    - need an ambulance in [pune](city)
+    - need an ambulance in [delhi](city)
+    - need an ambulance in [uttar pradesh](state)
+    - need an ambulance in [sikkim](state)
+    - need an ambulance in [mizoram](state)
+    - need an ambulance in [manipur](state)
+    - need an ambulance in [nagaland](state)
+    - need an ambulance in [tripura](state)
+    - need an ambulance in [Port Blair](city)
+    - need an ambulance in [Hyderabad](city)
+    - need an ambulance in [Nampally](city)
+    - need an ambulance in [Secunderabad](city)
+    - need an ambulance in [Kadapa](city)
+    - need an ambulance in [Kurnool](city)
+    - need an ambulance in [Rajahmundry](city)
+    - need an ambulance in [Vijayawada](city)
+    - need an ambulance in [Visakhapatnam](city)
+    - need an ambulance in [Daporijo](city)
+    - need an ambulance in [Itanagar](city)
+    - need an ambulance in [Tawang](city)
+    - need an ambulance in [Barpeta](city)
+    - need an ambulance in [Dibrugarh](city)
+    - need an ambulance in [Ghungoor](city)
+    - need an ambulance in [Guwahati](city)
+    - need an ambulance in [Jorhat](city)
+    - need an ambulance in [Tezpur](city)
+    - need an ambulance in [Muzaffarpur](city)
+    - need an ambulance in [Darbhanga](city)
+    - need an ambulance in [Gaya](city)
+    - need an ambulance in [Patna](city)
+    - need an ambulance in [Chandigarh](city)
+    - need an ambulance in [Mohali](city)
+    - need an ambulance in [Bhilai](city)
+    - need an ambulance in [Bilaspur](city)
+    - need an ambulance in [Jagdalpur](city)
+    - need an ambulance in [Raipur](city)
+    - need an ambulance in [Silvassa](city)
+    - need an ambulance in [Daman](city)
+    - need an ambulance in [Delhi](city)
+    - need an ambulance in [New Delhi](city)
+    - need an ambulance in [Goa](state)
+    - need an ambulance in [Panjim](city)
+    - need an ambulance in [Ahmedabad](city)
+    - need an ambulance in [Anand](city)
+    - need an ambulance in [Bharuch](city)
+    - need an ambulance in [Bhavnagar](city)
+    - need an ambulance in [Godhra](city)
+    - need an ambulance in [Jamnagar](city)
+    - need an ambulance in [karamsad](city)
+    - need an ambulance in [Rajkot](city)
+    - need an ambulance in [Sanand](city)
+    - need an ambulance in [Surat](city)
+    - need an ambulance in [Surendranagar](city)
+    - need an ambulance in [Vadodara](city)
+    - need an ambulance in [Agroha](city)
+    - need an ambulance in [Ambala](city)
+    - need an ambulance in [Bhiwani](city)
+    - need an ambulance in [Faridabad](city)
+    - need ambulance in [Gurgaon](city)
+    - need ambulance in [Fatehabad](city)
+    - need ambulance in [Hisar](city)
+    - need ambulance in [Jhajjar](city)
+    - need ambulance in [Jind](city)
+    - need ambulance in [Karnal](city)
+    - need ambulance in [Kurukshetra](city)
+    - need ambulance in [Mahendergarh](city)
+    - need ambulance in [Narnaul](city)
+    - need ambulance in [Palwal](city)
+    - need ambulance in [Panchkula](city)
+    - need ambulance in [Panipat](city)
+    - need ambulance in [Rewari](city)
+    - need ambulance in [Rohtak](city)
+    - need ambulance in [Sirsa](city)
+    - need ambulance in [Sonipat](city)
+    - need ambulance in [Yamunanagar](city)
+    - need ambulance in [Kangra](city)
+    - need ambulance in [Shimla](city)
+    - need ambulance in [Jammu](city)
+    - need ambulance in [Srinagar](city)
+    - need ambulance in [Hazaribagh](city)
+    - need ambulance in [Jamshedpur](city)
+    - need ambulance in [Ranchi](city)
+    - need ambulance in [Bengaluru](city)
+    - need ambulance in [Mangalore](city)
+    - need ambulance in [Alappuzha](city)
+    - need ambulance in [Cochin](city)
+    - need ambulance in [Kannur](city)
+    - need ambulance in [Karakonam](city)
+    - need ambulance in [Kochi](city)
+    - need ambulance in [Kolencherry](city)
+    - need ambulance in [Kollam](city)
+    - need ambulance in [Kottayam](city)
+    - need ambulance in [Kozhikode](city)
+    - need ambulance in [Modakkallur](city)
+    - need ambulance in [Palakkad](city)
+    - need ambulance in [Pathanamthitta](city)
+    - need ambulance in [Perintalmanna](city)
+    - need ambulance in [Thiruvalla](city)
+    - need ambulance in [Thiruvananthapuram](city)
+    - need ambulance in [Thrissur](city)
+    - emergency ambulance in [Venjaramoodu](city)
+    - emergency ambulance in [Kavaratti](city)
+    - emergency ambulance in [Indore](city)
+    - emergency ambulance in [Mumbai](city)
+    - emergency ambulance in [Pune](city)
+    - emergency ambulance in [Thane](city)
+    - emergency ambulance in [Imphal](city)
+    - emergency ambulance in [Manipur](city)
+    - emergency ambulance in [Shillong](city)
+    - emergency ambulance in [Aizawl](city)
+    - emergency ambulance in [Kohima](city)
+    - emergency ambulance in [Behrampur](city)
+    - emergency ambulance in [Bhubaneswar](city)
+    - emergency ambulance in [Burla](city)
+    - emergency ambulance in [Cuttack](city)
+    - emergency ambulance in [Rourkela](city)
+    - emergency ambulance in [Gorimedu](city)
+    - emergency ambulance in [Kalapet](city)
+    - emergency ambulance in [Kudupakkam](city)
+    - emergency ambulance in [Madagadipet](city)
+    - emergency ambulance in [Pangoor](city)
+    - emergency ambulance in [Pillaiyarkuppam](city)
+    - emergency ambulance in [Puducherry](city)
+    - emergency ambulance in [Amritsar](city)
+    - emergency ambulance in [Hoshiarpur](city)
+    - emergency ambulance in [Jalandhar](city)
+    - emergency ambulance in [Ludhiana](city)
+    - emergency ambulance in [Patiala](city)
+    - emergency ambulance in [Ropar](city)
+    - emergency ambulance in [Zirakpur](city)
+    - emergency ambulance in [Ajmer](city)
+    - emergency ambulance in [Jaipur](city)
+    - emergency ambulance in [Jodhpur](city)
+    - emergency ambulance in [Gangtok](city)
+    - emergency ambulance in [Chennai](city)
+    - emergency ambulance in [Kanyakumari](city)
+    - emergency ambulance in [Salem](city)
+    - emergency ambulance in [Vellore](city)
+    - emergency ambulance in [Agartala](city)
+    - emergency ambulance in [Agra](city)
+    - emergency ambulance in [Ghaziabad](city)
+    - emergency ambulance in [Greater Noida](city)
+    - emergency ambulance in [Hathras](city)
+    - emergency ambulance in [Kanpur](city)
+    - emergency ambulance in [Lucknow](city)
+    - emergency ambulance in [Meerut](city)
+    - emergency ambulance in [Moradabad](city)
+    - emergency ambulance in [Muzaffarnagar](city)
+    - emergency ambulance in [Noida](city)
+    - emergency ambulance in [Saharanpur](city)
+    - emergency ambulance in [Varanasi](city)
+    - emergency ambulance in [Dehradun](city)
+    - emergency ambulance in [Haldwani](city)
+    - emergency ambulance in [Rishikesh](city)
+    - emergency ambulance in [Roorkee](city)
+    - emergency need ambulance [Kolkata](city)
+    - emergency need ambulance [Andaman & Nicobar Islands](state)
+    - emergency need ambulance [Andhra Pradesh](state)
+    - emergency need ambulance [Arunachal Pradesh](state)
+    - emergency need ambulance [Assam](state)
+    - emergency need ambulance [Bihar](state)
+    - emergency need ambulance [Chhattisgarh](state)
+    - emergency need ambulance [Dadra & Nagar](city)
+    - emergency need ambulance [Daman and Diu](city)
+    - emergency need ambulance [Delhi](city)
+    - emergency need ambulance [Gujarat](state)
+    - emergency need ambulance [Haryana](city)
+    - emergency need ambulance [Himachal Pradesh](state)
+    - emergency need ambulance [Jammu and Kashmir](state)
+    - emergency need ambulance [Jharkhand](state)
+    - emergency need ambulance [Karnataka](city)
+    - emergency need ambulance [Kerala](state)
+    - emergency need ambulance [Lakshadweep](city)
+    - emergency need ambulance [Madhya Pradesh](state)
+    - emergency need ambulance [Maharashtra](state)
+    - emergency need ambulance [Manipur](state)
+    - emergency need ambulance [Meghalaya](state)
+    - emergency need ambulance [Mizoram](state)
+    - emergency need ambulance [Nagaland](state)
+    - emergency need ambulance [Odisha](state)
+    - emergency need ambulance [Punjab](state)
+    - covid emergency ambulance in [Rajasthan](state)
+    - covid emergency ambulance in [Sikkim](state)
+    - covid emergency ambulance in [Tamil Nadu](state)
+    - covid emergency ambulance in [Tripura](state)
+    - covid emergency ambulance in [Uttar Pradesh](state)
+    - covid emergency ambulance in [Uttarakhand](state)
+    - covid emergency ambulance in [West Bengal](state)
+    - covid emergency ambulance in [Karnataka](state)
+    - covid emergency ambulance in [Tamilnadu](state)
+    - covid emergency ambulance in [Kerala](state)
+    - covid emergency ambulance in [Pondichhery](state)
+    - covid emergency ambulance in [Maharastra](state)
+    - covid emergency ambulance in [Goa](state)
+    - covid emergency ambulance in [AndhraPradesh](state)
+    - covid emergency ambulance in [Telangana](state)
+    - covid emergency ambulance in [MadhyaPradesh](state)
+    - covid emergency ambulance in [UP](state)
+    - covid emergency ambulance in [Delhi](state)
+    - covid emergency ambulance in [Gujrat](state)
+    - covid emergency ambulance in [Hariyana](state)
+    - covid emergency ambulance nearby [HimachalPradesh](state)
+    - covid emergency ambulance nearby [Uttarakhand](state)
+    - covid emergency ambulance nearby [Jammu and Kashmir](state)
+    - covid emergency ambulance nearby [Ladakh](state)
+    - covid emergency ambulance nearby [Chattisgarh](state)
+    - covid emergency ambulance nearby [Bihar](state)
+    - covid emergency ambulance nearby [Jharkhand](state)
+    - covid emergency ambulance nearby [Odisha](state)
+    - covid emergency ambulance nearby [WestBengal](state)
+    - covid emergency ambulance nearby [Sikkim](state)
+    - covid emergency ambulance nearby [Assam](state)
+    - covid emergency ambulance nearby [Meghalaya](state)
+    - covid emergency ambulance nearby [Manipur](state)
+    - covid emergency ambulance nearby [Nagaland](state)
+    - covid emergency ambulance nearby [Mijoram](state)
+    - covid emergency ambulance nearby [Tripura](state)
+    - covid emergency ambulance nearby [Arunachal Pradesh](state)
+    - covid emergency ambulance nearby [Adoni](city)
+    - covid emergency ambulance nearby [Amaravati](city)
+    - covid emergency ambulance nearby [Anantapur](city)
+    - covid emergency ambulance nearby [Chandragiri](city)
+    - covid emergency ambulance nearby [Chittoor](city)
+    - covid emergency ambulance nearby [Madgaon](city)
+    - covid emergency ambulance nearby [Panaji](city)
+    - covid emergency ambulance nearby [Ahmadabad](city)
+    - covid emergency ambulance nearby [Amreli](city)
+    - covid emergency ambulance nearby [Bharuch](city)
+    - covid emergency ambulance nearby [Bhavnagar](city)
+    - covid emergency ambulance nearby [Bhuj](city)
+    - covid emergency ambulance nearby [Dwarka](city)
+    - covid emergency ambulance nearby [Gandhinagar](city)
+    - covid emergency ambulance nearby [Godhra](city)
+    - covid emergency ambulance nearby [Jamnagar](city)
+    - covid emergency ambulance nearby [mumbai](city)
+    - covid emergency ambulance nearby [chennai](city)

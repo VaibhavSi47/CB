@@ -1,0 +1,15 @@
+from Adolescentsyouth import adol_youth
+class ActionAdolescentsYouth(Action):
+
+     def name(self) -> Text:
+         return "action_Adolescentsyouth"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+         url = 'https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19-adolescents-and-youth'
+         fq = adol_youth(url)
+         dispatcher.utter_template(tracker ,fq)
+
+         return []
