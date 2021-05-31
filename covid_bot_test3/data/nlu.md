@@ -1,0 +1,345 @@
+## intent:greet
+- hey
+- hello
+- hi
+- good morning
+- good evening
+- hey there
+
+## intent:goodbye
+- bye
+- goodbye
+- see you around
+- see you later
+
+## intent:affirm
+- yes
+- indeed
+- of course
+- that sounds good
+- correct
+## intent:covid_tracker_1
+-number of cases in my area
+- are there a lot of cases right now?
+- does the country have a lot of cases?
+- does the have a lot of cases?
+- have many people died due to covid-19?
+- how many cases have there been
+- how many cases of corona infection have there been?
+- how many deaths have there been?
+- how many fatalities have there been?
+- how many have died due to coronavirus
+- how many have tested positive?
+- how many people have been infected
+- how many people have tested positive
+- number of cases
+- what is the fatality number?
+- what is the fatality rate?
+- what is the number of cases
+- what is the number of deaths
+- what is the number of fatalities?
+- what is the number of infections?
+- what number have tested positive?
+- what number of people have been infected?
+- what number of people have tested positive?
+
+## intent:covid_tracker
+
+-corona cases in [karnataka](state)
+-corona cases in [maharashtra](state)
+-corona cases in [goa](state)
+-corona cases in [bihar](state)
+-corona cases in [punjab](state)
+-corona cases in [delhi](state)
+-corona cases in [west bengal](state)
+-corona cases in [jharkhand](state)
+-corona cases in [bihar](state)
+-corona cases in [uttar pradesh](state)
+-corona cases in [kerala](state)
+-corona cases in [gujarat](state)
+-corona cases in [rajasthan](state)
+-corona cases in [tamil nadu](state)
+-corona cases in [andhra pradesh](state)
+-corona cases in [telangana](state)
+-corona cases in [odisha](state)
+-corona cases in [chhattisgarh](state)
+-corona cases in [west bengal](state)
+-corona cases in [himachal pradesh](state)
+-corona cases in [haryana](state)
+-[karnataka](state)
+-[maharashtra](state)
+-[goa](state)
+-[bihar](state)
+-[punjab](state)
+-[delhi](state)
+-[west bengal](state)
+-i want to see number of covid cases in [russia](location)
+-active cases [russia](location)
+-[colombia](location) stats
+-covid [india](location)
+-corona cases in [usa](location)
+-coronavirus case [china](location)
+-[brazil](location) covid
+-[spain](location) cases
+-[france](location) no of cases
+-no of cases in [mexico](location)
+-what are total number of cases in [japan](location)
+-how many cases are there in [peru](location)?
+-are there a lot of cases in [Bangladesh](location)?
+-how many cases of corona infection have there been in [uk](location)?
+-how many fatalities have there been in [uk](location)?
+-how many people have been tested positive ,[usa](location)?
+-what is the number of infections?
+-[india](location) what number of people have been infected?
+-[Peru](location), what number of people have tested positive?
+-give me live count of [brazil](location)
+-how many are confirmed cases [pakistan](location)
+-give me live stats of corona [japan](location)
+-latest stats updates for corona [mexico](location)
+-[mumbai](location) cases
+-cases in [pune](location)
+-deaths in [delhi](location)
+-infected in [uttar pradesh](location)
+-[maharashtra](location) covid cases
+-decreased cases in [japan](location)
+-[sikkim](location)
+-[andaman and nicobar](location)
+-[mizoram](location)
+-[manipur](location)
+-[goa](location)
+-[nagaland](location)
+-[tripura](location)
+-[europe](location)
+
+
+## intent:deny
+- no
+- never
+- I don't think so
+- don't like that
+- no way
+- not really
+
+## intent:mood_great
+- perfect
+- very good
+- great
+- amazing
+- wonderful
+- I am feeling very good
+- I am great
+- I'm good
+
+## intent:mood_unhappy
+- sad
+- very sad
+- unhappy
+- bad
+- very bad
+- awful
+- terrible
+- not very good
+- extremely sad
+- so sad
+
+## intent:bot_challenge
+- are you a bot?
+- are you a human?
+- am I talking to a bot?
+- am I talking to a human?
+
+ 
+## intent:what_can_you_do
+- What all things can you do ?
+- what are the features of the bot ?
+- features
+- features of the bot ?
+
+## intent:screening
+- I want to get screened .
+- Do I need to go get tested .
+- when do i need to go to a clinic?
+- when should i go to hospital?
+
+## intent:faq_symptoms
+- am i going to die?
+- am i going to need hospital treatment?
+- are aches a symptom?
+- are the symptoms serious?
+- can i still have it but have no symptoms?
+- can people die from contacting covid-19?
+- can people die from contracting covid-19?
+- can people die from coronavirus?
+- can people die from this?
+- can there be complications from covid-19 symptoms?
+- can you be infected and not show any symptoms?
+- can you tell me what the symptoms are?
+- could i be carrying coronavirus if i don't have symptoms?
+- does everyone have symptoms?
+- how badly should i be coughing?
+- how can i identify the symptoms of corona?
+- how can i tell if i have corona virus?
+- how do i know i have covid-19?
+- how do i know i might be a carrier?
+- how do i know i might have it?
+- how do i know if i have a high temperature?
+- how do i know if i have it?
+- how do i know if i need hospital treatment?
+- how do i know if i'm a carrier of covid-19?
+- how do i know if i've caught coronavirus?
+- how do i know if i've caught it?
+- how high does my fever have to be for me to go to hospital?
+- how high is a fever?
+- how is your body affected by corona?
+- how long do i have to be sick for before i can go to a clinic?
+- how long should i have a fever for?
+- how severe do my symptoms have to be before i go to hospital?
+- how would my body feel if i caught the virus?
+- i have a fever, do i have corona?
+- i'm coughing, what should i do?
+- is a symptom?
+- is coughing a symptom of the disease?
+- is joint pain a symptom?
+- should i go to a health centre if i have symptoms?
+- what are the signs and symptoms?
+- what are the signs of corona?
+- what are the signs of covid-19?
+- what are the signs?
+- what are the symptoms?
+- what counts as a high temperature?
+- what do aches and pains mean?
+- what do the symptoms look like?
+- what does a high temperature feel like?
+- what does asymptomatic mean?
+- what does dry cough mean?
+- what does having corona feel like?
+- what does having corona virus feel like?
+- what does having the virus feel like?
+- what does it mean if i'm coughing?
+- what does it mean to be asymptomatic?
+- what does persistent cough mean?
+- what does the virus do to your body?
+- what does this virus do to the body?
+- what is a dry cough?
+- what is a fever?
+- what is a high temperatures?
+- what is an asymptomatic carrier?
+- what is different about a dry cough?
+- what should i do if i think i have it?
+- what should i do if i think i might have corona virus?
+- what signs of covid-19 should i look for?
+- what temperature is a fever?
+- when do i need to go to a clinic?
+- when is a cough persistent?
+- when should i go to hospital?
+- when should i go to the emergency room?
+- What Happens If i get  Coronavirus?
+- What does Coronavirus do?
+- How does human body behave if i get coronavirus?
+
+## intent:faq_distancing
+- am i going into quarantine?
+- are there guidelines for how to self-isolate?
+- can i go for a walk?
+- can i still go outside?
+- can i still travel to work?
+- can i walk somewhere?
+- do i have to avoid going outside?
+- do i have to avoid people?
+- do i have to isolate?
+- do i have to stay away from people?
+- do i have to stay inside?
+- how do i self isolate
+- how do i socially distance
+- how does quarantine work?
+- how does social distancing work?
+- how far apart should i stay for social distancing?
+- how long do i have to self-isolate for?
+- how long do i have to stay inside
+- how will social distancing help?
+- should i stay away from people?
+- what amount of time do i have to self-isolate for?
+- what are the guidelines for a lockdown?
+- what are the guidelines for isolating?
+- what are the guidelines for social-distancing
+- what counts as essential travel?
+- what do i have to self-isolate for?
+- what does social distancing mean?
+- what essential travel can i still do?
+- what if i want to go for a walk
+- what is essential travel?
+- what is quarantine?
+- what is self-isolation
+- what is social distancing
+- when should i stay in isolation?
+- who doesn't need to stay at home?
+- who needs to stay at home?
+- why do i have to avoid going outside?
+- why do i have to avoid people?
+- why do i have to stay inside?
+- why does social distancing help?
+- why should i isolate
+- why should i quarantine myself?
+- why should most people isolate?
+- will quarantine work?
+
+## intent:faq_spread
+- can coronavirus spread by coughing?
+- can coronavirus survive on skin?
+- can covid get into my eyes?
+- can sneezing spread coronavirus?
+- can you catch corona from an unclean surface?
+- can you catch coronavirus from another person?
+- can you catch the virus from dirty surfaces?
+- could i pass corona virus onto someone else?
+- does coughing spread corona?
+- does coughing spread covid-19?
+- does does a virus spread?
+- how can i avoid covid-19?
+- how can i avoid getting coronavirus?
+- how can i protect myself?
+- how contagious is it?
+- how did corona become so widespread?
+- how did covid-19 become so widespread?
+- how did it become so widespread?
+- how did this disease become so widespread?
+- how do i catch corona?
+- how do viruses become widespread?
+- how do we stop people getting coronavirus?
+- how do we stop people getting it?
+- how do we stop people getting sick?
+- how do you catch coronavirus
+- how do you catch it?
+- how does covid 19 spread?
+- how does covid pass from person to person?
+- how does covid spread from person to person?
+- how does covid-19 spread between between?
+- how does covid-19 spread from one person to another?
+- how does covid-19 spread?
+- how does the virus spread
+- how is it so contagious?
+- how long can the virus remain on surfaces?
+- how long does coronavirus stay on surfaces?
+- how long does it stay on skin?
+- how long does the virus stay on your hands face?
+- how long does the virus stay on your hands?
+- how would i catch the virus from someone else?
+- i want to avoid getting covid, what should i do?
+- is corona virus contagious?
+- is it contagious?
+- is this disease very contagious?
+- what should i do to avoid getting coronavirus?
+- what should i do to avoid getting covid?
+- what should i do to protect myself from catching covid19?
+- what should i do to protect myself?
+- why can't i touch my face with my hands?
+- why do you have to clean surfaces?
+- why is skin-on-skin contact to be avoided?
+- why shouldn't i touch my eyes?
+- why shouldn't i touch my face?
+
+## intent:covid_info
+- what is covid_19 ?
+- what is coronavirus ?
+- what  is sars cov2 ?
+

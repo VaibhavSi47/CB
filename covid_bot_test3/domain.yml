@@ -1,0 +1,211 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - covid_tracker
+  - covid_tracker_1
+  - what_can_you_do
+  - screening
+  - faq_symptoms
+  - faq_distancing
+  - faq_spread
+  - covid_info
+
+
+
+entities:
+  - location
+  - state
+
+actions:
+  - action_corona_tracker
+  -   utter_botgreet
+  -   utter_things_do
+  -   utter_which_state
+  -   utter_symptoms
+  -   utter_distancing
+  -   utter_spread
+  -   utter_covid_info
+  -   utter_language
+  -   utter_intermediary
+  -   utter_gender
+  -   utter_temperature
+  -   utter_health_condition
+  -   utter_symptom_2
+  -   utter_travel
+
+responses:
+  utter_botgreet:
+  - text: "How can i help you sir ?"
+  utter_things_do:
+  - text: "I can help you know "
+    buttons:
+      - title : "Screening"
+        payload: "/screening"
+      - title : "Tracker"
+        payload: "/covid_tracker_1"
+      - title : "Covid Symptoms"
+        payload: "/faq_symptoms"
+
+  utter_language:
+  - text: "Please pick your preferred language ."
+    buttons:
+      - title: "English"
+        payload: "/english"
+      - title: "Hindi"
+        payload: "/Hindi"
+  utter_intermediary:
+  - text: "Great! So we're about to ask you a couple of questions to determine your health condition."
+  utter_age:
+  - text: "Let's start with the basics! How old are you? "
+  utter_gender:
+  - text: "And your gender? 👇"
+    buttons:
+      - title: "female"
+        payload: "/female"
+      - title: "Male"
+        payload: "/Male"
+  utter_temperature:
+  - text: "Now let's understand your current body temperature in degrees Fahrenheit. 🤒
+           Remember Normal body temperature is 98.6°F. 🌡"
+    buttons:
+      - title: "Normal (96°F-98.6°F)"
+        payload: "/normal"
+      - title: "Fever (98.7°F-102°F)"
+        payload: "/fever"
+      - title: "High Fever(>102°F)"
+        payload: "/high fever"
+
+  utter_health_condition:
+  - text: "To understand your condition, we need more details about previous health conditions.
+           ⛑Hope you understand. 🙏
+           Do you have a history of any of these conditions (mark all those applicable) ✔"
+    buttons:
+      - title: "Diabetes"
+        payload: "/diabetes"
+      - title: "High blood Pressure"
+        payload: "/hbp"
+      - title: "Heart Disease"
+        payload: "/heart_disease"
+      - title: "Kidney Disease"
+        payload: "/kidney"
+      - title: "Lung Disease"
+        payload: "/lung"
+      - title: "Stroke"
+        payload: "/stroke"
+      - title: "None of these"
+        payload: "/nil"
+
+  utter_symptom_2:
+  - text: "One last question and we are done. 🙏
+           How have your symptoms progressed over the last 48 hrs? ⏰ "
+    buttons:
+      - title: "Improved"
+        payload: "/improved"
+      - title: "Same no change"
+        payload: "/no_change"
+      - title: "Bad"
+        payload: "/bad"
+      - title: "Bad Considerably"
+        payload: "/bad_considerably"
+
+  utter_travel:
+  - text: "I noted that ✍
+          Please tell us about your travel and exposure details. ✈"
+    buttons:
+      - title: "No Travel History"
+        payload: "/no_travel"
+      - title: "No contact with anyone with the symptoms"
+        payload: "/no_contact"
+      - title: "History of travel and meeting in affected geographical area in last 14 days"
+        payload: "/travel_history"
+      - title: "History of travel and meeting in affected geographical area in last 14 days"
+        payload: "/travel_history"
+
+  utter_symptoms_3:
+  - text: "Hmm...🤔
+           Are you experiencing any of the symptoms below (mark all those applicable)? 🤒"
+    buttons:
+      - title: "Dry Cough"
+        payload: "/drycough"
+      - title: "Sore Throat"
+        payload: "/sorethroat"
+      - title: "Shortness of Breath"
+        payload: "/Shortness_of_breath"
+      - title: "Severe Weakness"
+        payload: "/severe weakness"
+      - title: "Drowsiness"
+        payload: "/drowsiness"
+      - title: "None of these"
+        payload: "/nil"
+
+  utter_which_state:
+  - text: "Which state numbers you want to know ?"
+  utter_distancing:
+  - text: "Social distancing is a public health practice that aims to prevent sick people
+           from coming in close contact with healthy people in order to reduce opportunities for disease transmission.
+           It can include large-scale measures like canceling group events or closing public spaces, as well as individual
+           decisions such as avoiding crowds."
+  utter_spread:
+  - text: "To prevent the spread of COVID-19:
+           Clean your hands often. Use soap and water, or an alcohol-based hand rub.
+           Maintain a safe distance from anyone who is coughing or sneezing.
+           Wear a mask when physical distancing is not possible.
+           Don’t touch your eyes, nose or mouth.
+           Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.
+           Stay home if you feel unwell.
+           If you have a fever, cough and difficulty breathing, seek medical attention."
+  utter_covid_info:
+  - text: "COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2.
+          WHO first learned of this new virus on 31 December 2019, following a report
+          of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China."
+
+  utter_greet:
+  - text: "Hey! How are you?"
+  utter_symptoms:
+  - text: "COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.
+           Most common symptoms:
+            -fever
+            - dry cough
+            - tiredness
+
+           Less common symptoms:
+           - aches and pains
+           - sore throat
+           - diarrhoea
+           - conjunctivitis
+           - headache
+           - loss of taste or smell
+           - a rash on skin, or discolouration of fingers or toes
+
+           Serious symptoms:
+           - difficulty breathing or shortness of breath
+           - chest pain or pressure
+           - loss of speech or movement
+
+         Seek immediate medical attention if you have serious symptoms. Always call before visiting your doctor or health facility.
+  "
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
