@@ -1,0 +1,179 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - greet:
+    use_entities: true
+  - goodbye:
+    use_entities: true
+  - affirm:
+    use_entities: true
+  - deny:
+    use_entities: true
+  - mood_great:
+    use_entities: true
+  - mood_unhappy:
+    use_entities: true
+  - bot_challenge:
+    use_entities: true
+  - covid_tracker:
+    use_entities: true
+  - covid_tracker_1:
+    use_entities: true
+  - what_can_you_do:
+    use_entities: true
+  - screening:
+    use_entities: true
+  - faq_symptoms:
+    use_entities: true
+  - faq_distancing:
+    use_entities: true
+  - faq_spread:
+    use_entities: true
+  - covid_info:
+    use_entities: true
+entities:
+- location
+- state
+slots: {}
+responses:
+  utter_botgreet:
+  - text: How can i help you sir ?
+  utter_things_do:
+  - buttons:
+    - payload: /screening
+      title: Screening
+    - payload: /covid_tracker_1
+      title: Tracker
+    - payload: /faq_symptoms
+      title: Covid Symptoms
+    text: 'I can help you know '
+  utter_language:
+  - buttons:
+    - payload: /english
+      title: English
+    - payload: /Hindi
+      title: Hindi
+    text: Please pick your preferred language .
+  utter_intermediary:
+  - text: Great! So we're about to ask you a couple of questions to determine your health condition.
+  utter_age:
+  - text: "Let's start with the basics! How old are you? "
+  utter_gender:
+  - buttons:
+    - payload: /female
+      title: female
+    - payload: /Male
+      title: Male
+    text: And your gender? 👇
+  utter_temperature:
+  - buttons:
+    - payload: /normal
+      title: Normal (96°F-98.6°F)
+    - payload: /fever
+      title: Fever (98.7°F-102°F)
+    - payload: /high fever
+      title: High Fever(>102°F)
+    text: Now let's understand your current body temperature in degrees Fahrenheit. 🤒 Remember Normal body temperature is 98.6°F. 🌡
+  utter_health_condition:
+  - buttons:
+    - payload: /diabetes
+      title: Diabetes
+    - payload: /hbp
+      title: High blood Pressure
+    - payload: /heart_disease
+      title: Heart Disease
+    - payload: /kidney
+      title: Kidney Disease
+    - payload: /lung
+      title: Lung Disease
+    - payload: /stroke
+      title: Stroke
+    - payload: /nil
+      title: None of these
+    text: To understand your condition, we need more details about previous health conditions. ⛑Hope you understand. 🙏 Do you have a history of any of these conditions (mark all those applicable) ✔
+  utter_symptom_2:
+  - buttons:
+    - payload: /improved
+      title: Improved
+    - payload: /no_change
+      title: Same no change
+    - payload: /bad
+      title: Bad
+    - payload: /bad_considerably
+      title: Bad Considerably
+    text: 'One last question and we are done. 🙏 How have your symptoms progressed over the last 48 hrs? ⏰ '
+  utter_travel:
+  - buttons:
+    - payload: /no_travel
+      title: No Travel History
+    - payload: /no_contact
+      title: No contact with anyone with the symptoms
+    - payload: /travel_history
+      title: History of travel and meeting in affected geographical area in last 14 days
+    - payload: /travel_history
+      title: History of travel and meeting in affected geographical area in last 14 days
+    text: I noted that ✍ Please tell us about your travel and exposure details. ✈
+  utter_symptoms_3:
+  - buttons:
+    - payload: /drycough
+      title: Dry Cough
+    - payload: /sorethroat
+      title: Sore Throat
+    - payload: /Shortness_of_breath
+      title: Shortness of Breath
+    - payload: /severe weakness
+      title: Severe Weakness
+    - payload: /drowsiness
+      title: Drowsiness
+    - payload: /nil
+      title: None of these
+    text: Hmm...🤔 Are you experiencing any of the symptoms below (mark all those applicable)? 🤒
+  utter_which_state:
+  - text: Which state numbers you want to know ?
+  utter_distancing:
+  - text: Social distancing is a public health practice that aims to prevent sick people from coming in close contact with healthy people in order to reduce opportunities for disease transmission. It can include large-scale measures like canceling group events or closing public spaces, as well as individual decisions such as avoiding crowds.
+  utter_spread:
+  - text: 'To prevent the spread of COVID-19: Clean your hands often. Use soap and water, or an alcohol-based hand rub. Maintain a safe distance from anyone who is coughing or sneezing. Wear a mask when physical distancing is not possible. Don’t touch your eyes, nose or mouth. Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze. Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention.'
+  utter_covid_info:
+  - text: COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2. WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.
+  utter_greet:
+  - text: Hey! How are you?
+  utter_symptoms:
+  - text: |-
+      COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization. Most common symptoms: -fever - dry cough - tiredness
+      Less common symptoms: - aches and pains - sore throat - diarrhoea - conjunctivitis - headache - loss of taste or smell - a rash on skin, or discolouration of fingers or toes
+      Serious symptoms: - difficulty breathing or shortness of breath - chest pain or pressure - loss of speech or movement
+      Seek immediate medical attention if you have serious symptoms. Always call before visiting your doctor or health facility.
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- action_corona_tracker
+- utter_botgreet
+- utter_things_do
+- utter_which_state
+- utter_symptoms
+- utter_distancing
+- utter_spread
+- utter_covid_info
+- utter_language
+- utter_intermediary
+- utter_gender
+- utter_temperature
+- utter_health_condition
+- utter_symptom_2
+- utter_travel
+forms: {}
+e2e_actions: []
